@@ -4,21 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="302bbbe3-80be-4d28-9b42-80cfa0f272d3" name="Changes" comment="- step 3 update settings">
+    <list default="true" id="302bbbe3-80be-4d28-9b42-80cfa0f272d3" name="Changes" comment="- step 4 update settings">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/api/woocommerce-pensopay-api-payment.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/api/woocommerce-pensopay-api-payment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/api/woocommerce-pensopay-api-subscription.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/api/woocommerce-pensopay-api-subscription.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/api/woocommerce-pensopay-api-transaction.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/api/woocommerce-pensopay-api-transaction.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/api/woocommerce-pensopay-api.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/api/woocommerce-pensopay-api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/modules/ajax/woocommerce-pensopay-admin-ajax-manage-payment.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/modules/ajax/woocommerce-pensopay-admin-ajax-manage-payment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/modules/ajax/woocommerce-pensopay-admin-ajax-ping.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/modules/ajax/woocommerce-pensopay-admin-ajax-ping.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/modules/woocommerce-pensopay-admin-orders-lists-table.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/modules/woocommerce-pensopay-admin-orders-lists-table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/modules/woocommerce-pensopay-admin-orders-meta.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/modules/woocommerce-pensopay-admin-orders-meta.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/updates/woocommerce-pensopay-update-4.6.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/updates/woocommerce-pensopay-update-4.6.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/woocommerce-pensopay-exceptions.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/woocommerce-pensopay-exceptions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helpers/transactions.php" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/transactions.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/admin/virtualterminal/payment.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/virtualterminal/payment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/woocommerce-brickellpay.php" beforeDir="false" afterPath="$PROJECT_DIR$/woocommerce-brickellpay.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +89,7 @@
       <workItem from="1720156624111" duration="335000" />
       <workItem from="1720157293094" duration="7819000" />
       <workItem from="1720165277988" duration="16000" />
-      <workItem from="1720165296057" duration="2330000" />
+      <workItem from="1720165296057" duration="3231000" />
     </task>
     <task id="LOCAL-00001" summary="- step 2 setting part">
       <option name="closed" value="true" />
@@ -119,7 +107,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720165422260</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="- step 4 update settings">
+      <option name="closed" value="true" />
+      <created>1720169894796</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1720169894796</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,6 +124,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="- step 2 setting part" />
     <MESSAGE value="- step 3 update settings" />
-    <option name="LAST_COMMIT_MESSAGE" value="- step 3 update settings" />
+    <MESSAGE value="- step 4 update settings" />
+    <option name="LAST_COMMIT_MESSAGE" value="- step 4 update settings" />
   </component>
 </project>
