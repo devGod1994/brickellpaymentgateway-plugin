@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="302bbbe3-80be-4d28-9b42-80cfa0f272d3" name="Changes" comment="" />
+    <list default="true" id="302bbbe3-80be-4d28-9b42-80cfa0f272d3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/woocommerce-pensopay.php" beforeDir="false" afterPath="$PROJECT_DIR$/woocommerce-brickellpay.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,7 +33,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "E:/3.Project/Wordpress/woocommerce-pensopay",
+    "last_opened_file_path": "C:/xampp/htdocs/wordpress/wp-content/plugins/brickellpaymentgateway-plugin",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -59,6 +64,7 @@
       <workItem from="1720082790460" duration="3578000" />
       <workItem from="1720092152107" duration="3987000" />
       <workItem from="1720156460439" duration="48000" />
+      <workItem from="1720156624111" duration="657000" />
     </task>
     <servers />
   </component>

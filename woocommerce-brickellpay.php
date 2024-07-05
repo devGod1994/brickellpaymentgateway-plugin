@@ -246,7 +246,7 @@ function init_pensopay_gateway() {
 
 			add_action( 'woocommerce_api_wc_' . $this->id, [ $this, 'callback_handler' ] );
 			add_action( 'woocommerce_order_status_completed', [ $this, 'woocommerce_order_status_completed' ] );
-			add_action( 'in_plugin_update_message-woocommerce-pensopay/woocommerce-pensopay.php', [ __CLASS__, 'in_plugin_update_message' ] );
+			add_action( 'in_plugin_update_message-woocommerce-pensopay/woocommerce-brickellpay.php', [ __CLASS__, 'in_plugin_update_message' ] );
 
             // WooCommerce Subscriptions hooks/filters
             if ( $this->supports( 'subscriptions' ) ) {
@@ -276,7 +276,7 @@ function init_pensopay_gateway() {
                 add_action( 'wp_ajax_pensopay_ping_api', [ $this, 'ajax_ping_api' ] );
                 add_action( 'wp_ajax_pensopay_fetch_private_key', [ $this, 'ajax_fetch_private_key' ] );
                 add_action( 'wp_ajax_pensopay_run_data_upgrader', 'WC_PensoPay_Install::ajax_run_upgrader' );
-                add_action( 'in_plugin_update_message-woocommerce-pensopay/woocommerce-pensopay.php', [ __CLASS__, 'in_plugin_update_message' ] );
+                add_action( 'in_plugin_update_message-woocommerce-pensopay/woocommerce-brickellpay.php', [ __CLASS__, 'in_plugin_update_message' ] );
 
 				add_action( 'woocommerce_email_before_order_table', [ $this, 'email_instructions' ], 10, 2 );
 
