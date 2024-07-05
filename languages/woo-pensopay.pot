@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-"Project-Id-Version: WooCommerce PensoPay\n"
+"Project-Id-Version: WooCommerce BrickellPay\n"
 "POT-Creation-Date: 2019-07-05 13:14+0300\n"
 "PO-Revision-Date: 2019-07-05 13:13+0300\n"
 "Last-Translator: \n"
@@ -13,7 +13,7 @@ msgstr ""
 "X-Generator: Poedit 2.2.3\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
-"X-Poedit-WPHeader: woocommerce-pensopay.php\n"
+"X-Poedit-WPHeader: woocommerce-brickellpay.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
 "esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
@@ -352,7 +352,7 @@ msgid "Shipping Method"
 msgstr ""
 
 #: classes/woocommerce-pensopay-settings.php:28
-msgid "Enable PensoPay Payment"
+msgid "Enable BrickellPay Payment"
 msgstr ""
 
 #: classes/woocommerce-pensopay-settings.php:34
@@ -655,7 +655,7 @@ msgstr ""
 
 #. Plugin Name of the plugin/theme
 #: classes/woocommerce-pensopay-settings.php:395
-msgid "WooCommerce PensoPay"
+msgid "WooCommerce BrickellPay"
 msgstr ""
 
 #: classes/woocommerce-pensopay-settings.php:396
@@ -715,7 +715,7 @@ msgid "Capture payment and activate subscription"
 msgstr ""
 
 #: views/html-notice-update.php:12 views/html-notice-upgrading.php:12
-msgid "WooCommerce PensoPay - Data Update"
+msgid "WooCommerce BrickellPay - Data Update"
 msgstr ""
 
 #: views/html-notice-update.php:13
@@ -771,7 +771,7 @@ msgid "Cached"
 msgstr ""
 
 #: woocommerce-pensopay.php:32
-msgid "WooCommerce PensoPay requires WooCommerce to be active."
+msgid "WooCommerce BrickellPay requires WooCommerce to be active."
 msgstr ""
 
 #: woocommerce-pensopay.php:33
@@ -885,7 +885,7 @@ msgid "Invalid callback body for order #%s."
 msgstr ""
 
 #: woocommerce-pensopay.php:1167
-msgid "Allows you to receive payments via PensoPay."
+msgid "Allows you to receive payments via Brickellpay."
 msgstr ""
 
 #: woocommerce-pensopay.php:1202

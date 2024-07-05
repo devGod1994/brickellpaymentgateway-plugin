@@ -109,7 +109,7 @@ function woocommere_pensopay_display_dismissible_admin_notices( $clear = true ) 
 		if ( ! empty( $notices ) ) {
 			array_walk( $notices, 'esc_html' );
 			echo '<div class="wcpp-notice notice notice-error is-dismissible">';
-			printf( '<h3>%s</h3>', __( 'PensoPay - Payment related problems registered' ) );
+			printf( '<h3>%s</h3>', __( 'BrickellPay - Payment related problems registered' ) );
 			echo '<p>' . wp_kses_post( implode( "</p>\n<p>", $notices ) ) . '</p>';
 			echo '</div>';
 		}

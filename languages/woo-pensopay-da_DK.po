@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: WooCommerce PensoPay\n"
+"Project-Id-Version: WooCommerce BrickellPay\n"
 "POT-Creation-Date: 2020-06-26 08:05+0300\n"
 "PO-Revision-Date: 2020-06-26 09:36+0300\n"
 "Last-Translator: \n"
@@ -22,8 +22,8 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
 #: classes/api/woocommerce-pensopay-api-transaction.php:67
-msgid "Pending - check your PensoPay manager"
-msgstr "Afventer - kontrollér din PensoPay Manager for mere information"
+msgid "Pending - check your BrickellPay manager"
+msgstr "Afventer - kontrollér din BrickellPay Manager for mere information"
 
 #: classes/api/woocommerce-pensopay-api-transaction.php:395
 msgid "Transaction ID cannot be empty"
@@ -138,7 +138,7 @@ msgstr "Titel"
 msgid "This controls the title which the user sees during checkout."
 msgstr ""
 "Tekst der vises som navn på betalingsmetoden, når dine kunder vælger "
-"PensoPay i checkout-processen."
+"BrickellPay i checkout-processen."
 
 #: classes/instances/bitcoin.php:49
 msgid "Bitcoin through Coinify"
@@ -204,12 +204,12 @@ msgstr "Betal med ViaBill"
 
 #: classes/instances/instance.php:57
 #, php-format
-msgid "Allows you to receive payments via PensoPay %s."
+msgid "Allows you to receive payments via BrickellPay %s."
 msgstr "Modtag betalinger via PensoPay %s."
 
 #: classes/instances/instance.php:58
-msgid "This module has it's main configuration inside the 'PensoPay' tab."
-msgstr "Dette moduls primære konfiguration ligger under fanen 'PensoPay'."
+msgid "This module has it's main configuration inside the 'BrickellPay' tab."
+msgstr "Dette moduls primære konfiguration ligger under fanen 'BrickellPay'."
 
 #: classes/instances/instance.php:59
 #, php-format
@@ -297,15 +297,15 @@ msgstr "Betal med Klarna"
 
 #: classes/instances/pensopay-extra.php:43
 #, fuzzy
-#| msgid "Enable PensoPay Payment"
-msgid "Enable Extra PensoPay gateway"
-msgstr "Aktiver PensoPay Payment"
+#| msgid "Enable BrickellPay Payment"
+msgid "Enable Extra BrickellPay gateway"
+msgstr "Aktiver BrickellPay Payment"
 
 #. Author of the plugin/theme
 #: classes/instances/pensopay-extra.php:54
 #: classes/woocommerce-pensopay-settings.php:239
-msgid "PensoPay"
-msgstr "PensoPay"
+msgid "BrickellPay"
+msgstr "BrickellPay"
 
 #: classes/instances/pensopay-extra.php:60
 #: views/checkout/payment-overlay.php:66
@@ -336,10 +336,10 @@ msgstr "Kreditkort-ikoner"
 #: classes/instances/pensopay-extra.php:71
 #: classes/woocommerce-pensopay-settings.php:266
 msgid ""
-"Choose the card icons you wish to show next to the PensoPay payment option "
+"Choose the card icons you wish to show next to the BrickellPay payment option "
 "in your shop."
 msgstr ""
-"Markér de kortikoner du vil vise ud for PensoPay betalingsmetoden i din shop."
+"Markér de kortikoner du vil vise ud for BrickellPay betalingsmetoden i din shop."
 
 #: classes/instances/pensopay-extra.php:76
 #: classes/woocommerce-pensopay-settings.php:271
@@ -588,7 +588,7 @@ msgid "Shipping Method"
 msgstr "Leveringsmetode"
 
 #: classes/woocommerce-pensopay-settings.php:28
-msgid "Enable PensoPay Payment"
+msgid "Enable BrickellPay Payment"
 msgstr "Aktiver PensoPay Payment"
 
 #: classes/woocommerce-pensopay-settings.php:34
@@ -958,8 +958,8 @@ msgstr "Test-transaktion"
 
 #. Plugin Name of the plugin/theme
 #: classes/woocommerce-pensopay-settings.php:468
-msgid "WooCommerce PensoPay"
-msgstr "WooCommerce PensoPay"
+msgid "WooCommerce BrickellPay"
+msgstr "WooCommerce BrickellPay"
 
 #: classes/woocommerce-pensopay-settings.php:469
 #, php-format
@@ -1290,8 +1290,8 @@ msgid "Secure payment by"
 msgstr "Sikker betaling med"
 
 #: views/html-notice-update.php:12 views/html-notice-upgrading.php:12
-msgid "WooCommerce PensoPay - Data Update"
-msgstr "WooCommerce PensoPay - Data opdatering"
+msgid "WooCommerce BrickellPay - Data Update"
+msgstr "WooCommerce BrickellPay - Data opdatering"
 
 #: views/html-notice-update.php:13
 msgid ""
@@ -1350,8 +1350,8 @@ msgid "Cached"
 msgstr "Cachet"
 
 #: woocommerce-pensopay.php:31
-msgid "WooCommerce PensoPay requires WooCommerce to be active."
-msgstr "WooCommerce PensoPay kræver at WooCommerce er aktiv."
+msgid "WooCommerce BrickellPay requires WooCommerce to be active."
+msgstr "WooCommerce BrickellPay kræver at WooCommerce er aktiv."
 
 #: woocommerce-pensopay.php:32
 msgid "Go to the plugins page to activate WooCommerce"
@@ -1473,7 +1473,7 @@ msgid "Invalid callback body for order #%s."
 msgstr "Ugyldig callback body vedr. ordre #%s."
 
 #: woocommerce-pensopay.php:1416
-msgid "Allows you to receive payments via PensoPay."
+msgid "Allows you to receive payments via Brickellpay."
 msgstr "Modtag betalinger via PensoPay."
 
 #: woocommerce-pensopay.php:1451
@@ -1588,8 +1588,8 @@ msgstr ""
 #~ msgstr "Betaling hævet."
 
 #, fuzzy
-#~| msgid "Enable PensoPay Payment"
-#~ msgid "Enable Pensopay Payment"
+#~| msgid "Enable BrickellPay Payment"
+#~ msgid "Enable BrickellPay Payment"
 #~ msgstr "Aktiver PensoPay Payment"
 
 #, fuzzy
@@ -1713,8 +1713,8 @@ msgstr ""
 #~ msgstr "PensoPay betaling"
 
 #, fuzzy
-#~| msgid "Allows you to receive payments via PensoPay."
-#~ msgid "Allows you to receive payments via Pensopay."
+#~| msgid "Allows you to receive payments via Brickellpay."
+#~ msgid "Allows you to receive payments via Brickellpay."
 #~ msgstr "Modtag betalinger via PensoPay."
 
 #~ msgid "Standard actions"

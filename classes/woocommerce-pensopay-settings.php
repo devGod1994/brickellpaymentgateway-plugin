@@ -25,7 +25,7 @@ class WC_PensoPay_Settings {
 				'enabled' => [
 					'title'   => __( 'Enable', 'woo-pensopay' ),
 					'type'    => 'checkbox',
-					'label'   => __( 'Enable PensoPay Payment', 'woo-pensopay' ),
+					'label'   => __( 'Enable BrickellPay Payment', 'woo-pensopay' ),
 					'default' => 'yes'
 				],
 
@@ -225,7 +225,7 @@ class WC_PensoPay_Settings {
 
 				'_Shop_setup'                           => [
 					'type'  => 'title',
-					'title' => __( 'Shop setup', 'woo-pensopay' ),
+					'title' => __( 'Shop setup', 'woo-brickellpay' ),
 				],
 				'title'                                 => [
 					'title'       => __( 'Title', 'woo-pensopay' ),
@@ -460,7 +460,7 @@ class WC_PensoPay_Settings {
 		}
 
 		if ( ! empty( $error_fields ) ) {
-			$message = sprintf( '<h2>%s</h2>', __( "WooCommerce PensoPay", 'woo-pensopay' ) );
+			$message = sprintf( '<h2>%s</h2>', __( "WooCommerce BrickellPay", 'woo-pensopay' ) );
 			$message .= sprintf( '<p>%s</p>', sprintf( __( 'You have missing or incorrect settings. Go to the <a href="%s">settings page</a>.', 'woo-pensopay' ), self::get_settings_page_url() ) );
 			$message .= '<ul>';
 			foreach ( $error_fields as $error_field ) {

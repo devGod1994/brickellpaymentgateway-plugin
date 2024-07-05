@@ -1,7 +1,7 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: PensoPay, Patrick Tolvstein
+ * User: BrickellPay, Patrick Tolvstein
  * Date: 11/06/2018
  * Time: 11.20
  */

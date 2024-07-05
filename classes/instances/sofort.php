@@ -40,7 +40,7 @@ class WC_PensoPay_Sofort extends WC_PensoPay_Instance {
 			],
 			'_Shop_setup' => [
 				'type'  => 'title',
-				'title' => __( 'Shop setup', 'woo-pensopay' ),
+				'title' => __( 'Shop setup', 'woo-brickellpay' ),
 			],
 			'title'       => [
 				'title'       => __( 'Title', 'woo-pensopay' ),

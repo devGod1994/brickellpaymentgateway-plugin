@@ -322,7 +322,7 @@ class WC_PensoPay_VirtualTerminal_Payment
                     'view_item'             => __('View Virtual Payment'),
                     'view_items'            => __('View Virtual Payments'),
                     'search_items'          => __('Search Virtual Payments'),
-                    'all_items'             => __('PensoPay - Virtual Terminal'),
+                    'all_items'             => __('BrickellPay - Virtual Terminal'),
                     'not_found'             => __('No virtual payments found.')
                 ),
                 'public' => true,

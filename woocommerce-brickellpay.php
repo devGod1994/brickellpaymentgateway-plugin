@@ -1,15 +1,12 @@
 <?php
 /**
- * Plugin Name: WooCommerce PensoPay
- * Plugin URI: http://wordpress.org/plugins/pensopay/
- * Description: Integrates your PensoPay payment gateway into your WooCommerce installation.
- * Version: 7.1.0
- * Author: PensoPay
- * Text Domain: woo-pensopay
+ * Plugin Name: WooCommerce BrickellPay
+ * Description: Integrates your BrickellPay payment gateway into your WooCommerce installation.
+ * Version: 1.0.0
+ * Author: Linus Lorenz
+ * Text Domain: woo-brickellpay
  * Domain Path: /languages/
- * Author URI: https://pensopay.com/
- * Wiki: https://pensopay.zendesk.com/hc/da
- * WC requires at least: 7.1.0
+ * WC requires at least: 1.0.0
  * WC tested up to: 8.5.1
  */
 
@@ -28,7 +25,7 @@ add_action( 'plugins_loaded', 'init_pensopay_gateway', 0 );
  */
 function wc_pensopay_woocommerce_inactive_notice() {
 	$class    = 'notice notice-error';
-	$headline = __( 'WooCommerce Pensopay requires WooCommerce to be active.', 'woo-pensopay' );
+	$headline = __( 'WooCommerce BrickellPay requires WooCommerce to be active.', 'woo-pensopay' );
 	$message  = __( 'Go to the plugins page to activate WooCommerce', 'woo-pensopay' );
 	printf( '<div class="%1$s"><h2>%2$s</h2><p>%3$s</p></div>', $class, $headline, $message );
 }
@@ -246,7 +243,7 @@ function init_pensopay_gateway() {
 
 			add_action( 'woocommerce_api_wc_' . $this->id, [ $this, 'callback_handler' ] );
 			add_action( 'woocommerce_order_status_completed', [ $this, 'woocommerce_order_status_completed' ] );
-			add_action( 'in_plugin_update_message-woocommerce-pensopay/woocommerce-pensopay.php', [ __CLASS__, 'in_plugin_update_message' ] );
+			add_action( 'in_plugin_update_message-woocommerce-pensopay/woocommerce-brickellpay.php', [ __CLASS__, 'in_plugin_update_message' ] );
 
             // WooCommerce Subscriptions hooks/filters
             if ( $this->supports( 'subscriptions' ) ) {
@@ -276,7 +273,7 @@ function init_pensopay_gateway() {
                 add_action( 'wp_ajax_pensopay_ping_api', [ $this, 'ajax_ping_api' ] );
                 add_action( 'wp_ajax_pensopay_fetch_private_key', [ $this, 'ajax_fetch_private_key' ] );
                 add_action( 'wp_ajax_pensopay_run_data_upgrader', 'WC_PensoPay_Install::ajax_run_upgrader' );
-                add_action( 'in_plugin_update_message-woocommerce-pensopay/woocommerce-pensopay.php', [ __CLASS__, 'in_plugin_update_message' ] );
+                add_action( 'in_plugin_update_message-woocommerce-pensopay/woocommerce-brickellpay.php', [ __CLASS__, 'in_plugin_update_message' ] );
 
 				add_action( 'woocommerce_email_before_order_table', [ $this, 'email_instructions' ], 10, 2 );
 
@@ -1135,7 +1132,7 @@ function init_pensopay_gateway() {
 		 */
 		public function generate_settings_html( $form_fields = array(), $echo = true ) {
 			$html  = "<h3>PensoPay - {$this->id}, v" . WCPP_VERSION . "</h3>";
-			$html .= "<p>" . __( 'Allows you to receive payments via Pensopay.', 'woo-pensopay' ) . "</p>";
+			$html .= "<p>" . __( 'Allows you to receive payments via Brickellpay.', 'woo-pensopay' ) . "</p>";
 			$html .= WC_PensoPay_Settings::clear_logs_section();
 
             ob_start();

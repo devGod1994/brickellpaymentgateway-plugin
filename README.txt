@@ -1,23 +1,23 @@
-=== WooCommerce PensoPay ===
-Contributors: PensoPay
-Tags: gateway, woo commerce, pensopay, gateway, integration, woocommerce, woocommerce pensopay, payment, payment gateway, psp
+=== WooCommerce BrickellPay ===
+Contributors: BrickellPay
+Tags: gateway, woo commerce, BrickellPay, gateway, integration, woocommerce, woocommerce BrickellPay, payment, payment gateway, psp
 Requires at least: 4.0.0
 Tested up to: 6.4.2
 Stable tag: trunk
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Integrates your PensoPay payment gateway into your WooCommerce installation.
+Integrates your BrickellPay payment gateway into your WooCommerce installation.
 
 == Description ==
-With WooCommerce PensoPay, you are able to integrate your PensoPay gateway to your WooCommerce install. With a wide list of API features including secure capturing, refunding and cancelling payments directly from your WooCommerce order overview. This is only a part of the many features found in this plugin.
+With WooCommerce BrickellPay, you are able to integrate your BrickellPay gateway to your WooCommerce install. With a wide list of API features including secure capturing, refunding and cancelling payments directly from your WooCommerce order overview. This is only a part of the many features found in this plugin.
 
 == Installation ==
-1. Upload the 'woocommerce-pensopay' folder to /wp-content/plugins/ on your server.
+1. Upload the 'woocommerce-BrickellPay' folder to /wp-content/plugins/ on your server.
 2. Log in to Wordpress administration, click on the 'Plugins' tab.
-3. Find WooCommerce PensoPay in the plugin overview and activate it.
-4. Go to WooCommerce -> Settings -> Payment Gateways -> PensoPay.
-5. Fill in all the fields in the "PensoPay account" section and save the settings.
+3. Find WooCommerce BrickellPay in the plugin overview and activate it.
+4. Go to WooCommerce -> Settings -> Payment Gateways -> BrickellPay.
+5. Fill in all the fields in the "BrickellPay account" section and save the settings.
 6. You are good to go.
 
 == Dependencies ==
@@ -48,32 +48,32 @@ General:
 * Fix: Bump tested WC version number to 8.1
 * Fix: Manually creating a payment link from wp-admin on subscriptions with empty transaction IDs could lead to errors on link generation
 * Fix: Problem with transaction fee from callbacks triggering an error when setting it on the order object.
-* Fix: Remove strict return type from WC_Pensopay_Paypal::apply_gateway_icons
+* Fix: Remove strict return type from WC_BrickellPay_Paypal::apply_gateway_icons
 * Feat: Added support for High Performance Order Storage / Custom Order Tables
 * Feat: Added template for meta-box-order.php
 * Feat: Added template for meta-box-subscription.php
 * Feat: Added support for Early Renewals modal
 * Fix: Added payment.quickpay.net as a whitelisted host to avoid problems with wp_safe_redirect when changing payment method in WCS 5.1.0 and above.
 * Fix: Adjust the link to payment methods documentation
-* Fix: WC_Pensopay::remove_renewal_meta_data wasn't removing subscription meta data from renewal orders properly.
+* Fix: WC_BrickellPay::remove_renewal_meta_data wasn't removing subscription meta data from renewal orders properly.
 * Fix: 'Create payment' now patches transactions in 'initial' state and creates new payments in case they have already been authorized.
 * Fix: 'Create payment' now ensures unique order numbers by adding a random string to the order number before sending it to the API. This fixes problems with duplicate order number errors from the API.
-* Dev: Refactor order logic in general which means we are deprecating the WC_Pensopay_Order object and its methods. For better compatibility, and to avoid overhead, we are solely relying on the WC_Order object.
-* Dev: Introducing utility helper classes used to replace logic in the WC_Pensopay_Order object
+* Dev: Refactor order logic in general which means we are deprecating the WC_BrickellPay_Order object and its methods. For better compatibility, and to avoid overhead, we are solely relying on the WC_Order object.
+* Dev: Introducing utility helper classes used to replace logic in the WC_BrickellPay_Order object
 * Dev: Bump minimum required version of WooCommerce to 7.1.0
 * Dev: Bump minimum required version of WooCommerce Subscriptions to 5.0
 * Dev: Bump minimum required version of PHP to 7.4
 * Fix: Avoid requesting quickpay_fetch_private_key on all order / subscription related pages.
 * Fix: Add fees to basket items array
-* Fix: Refactor WC_Pensopay_Order::get_transaction_basket_params_line_helper
+* Fix: Refactor WC_BrickellPay_Order::get_transaction_basket_params_line_helper
 * Fix: Remove shipping[tracking_number] and shipping[tracking_url] by default as they were empty anyway and resulted in problems with Resurs payments
 * Fix: Vipps - adjust payment method to "vipps,vippspsp"
-* Dev: Introducing filter woocommerce_pensopaypay_transaction_params_basket_apply_fees
+* Dev: Introducing filter woocommerce_BrickellPaypay_transaction_params_basket_apply_fees
 * Fix: Rely on auto_capture_at instead of due_date for MPS payments
-* Fix: Enhance the way auto_capture_at is calculated. It now relies on the timezone used in WordPress but can be changed with the filter woocommerce_pensopaypay_mps_timezone
+* Fix: Enhance the way auto_capture_at is calculated. It now relies on the timezone used in WordPress but can be changed with the filter woocommerce_BrickellPaypay_mps_timezone
 * Feat: MobilePay Subscriptions - setting added to control status transition when a payment agreement is cancelled outside WooCommerce.
-* Dev: add filter woocommerce_pensopaypay_mps_cancelled_from_status
-* Dev: add filter woocommerce_pensopaypay_mps_cancel_agreement_status_options
+* Dev: add filter woocommerce_BrickellPaypay_mps_cancelled_from_status
+* Dev: add filter woocommerce_BrickellPaypay_mps_cancel_agreement_status_options
 * Fix: Bump tested with WC version to 6.6
 * Fix: Bump tested with WP version to 6.0
 * Feat: Anyday - hide gateway if currency is not DKK and if cart total is not within 300 - 30.000
@@ -84,28 +84,28 @@ General:
 * Fix: MobilePay Subscription gateway is now available when using the "Change Payment" option from the account page.
 * Feat: Add Apple Pay gateway - works only in Safari.
 * Feat: Show a more user-friendly error message when payments fail in the callback handler.
-* Dev: Add new filter woocommerce_pensopaypay_checkout_gateway_icon
+* Dev: Add new filter woocommerce_BrickellPaypay_checkout_gateway_icon
 * Fix: Bump WC + WP tested with versions to latest versions
-* Dev: Add WC_Pensopay_Countries::getAlpha2FromAlpha3
+* Dev: Add WC_BrickellPay_Countries::getAlpha2FromAlpha3
 * Fix: Use alpha2 country code instead of alpha3 country code in MP Checkout callbacks
 * Fix: Modify force checkout logic used for MobilePay Checkout to enhance theme support.
-* Fix: WC_Pensopay_API_Transaction::get_brand removes prefixed pensopaypay_ when fallback to variables.
+* Fix: WC_BrickellPay_API_Transaction::get_brand removes prefixed BrickellPaypay_ when fallback to variables.
 * Fix: Refund now supports location header to avoid wrong response messages when capturing Klarna and Anyday payments.
-* Dev: Add filter woocommerce_pensopaypay_transaction_params
-* Dev: Add filter woocommerce_pensopaypay_transaction_params_description
+* Dev: Add filter woocommerce_BrickellPaypay_transaction_params
+* Dev: Add filter woocommerce_BrickellPaypay_transaction_params_description
 * Bump WC tested with version
 * Bump WP tested with version
 * Feat: MobilePay Checkout now automatically ticks the terms and condition field during checkout.
 * Fix: PHP8 compatability
 * Fix: Capture now supports location header to avoid wrong response messages when capturing Klarna and Anyday payments.
-* Fix: WC_Pensopay_API_Transaction::get_brand now falls back to variables.payment_methods sent from the shop if brand is empty on metadata.
+* Fix: WC_BrickellPay_API_Transaction::get_brand now falls back to variables.payment_methods sent from the shop if brand is empty on metadata.
 
 == Changelog ==
 = 6.3.3 =
 * Compatibility test with WC 8.1
 
 = 6.3.2 = 
-* Fix: Sanitize pensopay_action in pensopay_manual_transaction_actions handler
+* Fix: Sanitize BrickellPay_action in BrickellPay_manual_transaction_actions handler
 * Fix: Remove final from private __clone() method to get rid of php >= 8 warning
 * Fix: Pass currency to price_normalize for refund notice
 
@@ -115,10 +115,10 @@ General:
 
 = 6.3.0 =
 * Fix: Rely on auto_capture_at instead of due_date for MPS payments
-* Fix: Enhance the way auto_capture_at is calculated. It now relies on the timezone used in WordPress but can be changed with the filter woocommerce_pensopay_mps_timezone
+* Fix: Enhance the way auto_capture_at is calculated. It now relies on the timezone used in WordPress but can be changed with the filter woocommerce_BrickellPay_mps_timezone
 * Feat: MobilePay Subscriptions - setting added to control status transition when a payment agreement is cancelled outside WooCommerce.
-* Dev: add filter woocommerce_pensopay_mps_cancelled_from_status
-* Dev: add filter woocommerce_pensopay_mps_cancel_agreement_status_options
+* Dev: add filter woocommerce_BrickellPay_mps_cancelled_from_status
+* Dev: add filter woocommerce_BrickellPay_mps_cancel_agreement_status_options
 * Fix: Bump tested with WC version to 6.6
 * Fix: Bump tested with WP version to 6.0
 * Feat: Anyday - hide gateway if currency is not DKK and if cart total is not within 300 - 30.000
@@ -128,18 +128,18 @@ General:
 * Feat: Add Apple Pay gateway - works only in Safari.
 * Fix: MobilePay Subscription gateway is now available when using the "Change Payment" option from the account page.
 * Feat: Show a more user-friendly error message when payments fail in the callback handler.
-* Dev: Add new filter woocommerce_pensopay_checkout_gateway_icon
-* Dev: Add WC_PensoPay_Countries::getAlpha2FromAlpha3
+* Dev: Add new filter woocommerce_BrickellPay_checkout_gateway_icon
+* Dev: Add WC_BrickellPay_Countries::getAlpha2FromAlpha3
 * Fix: Use alpha2 country code instead of alpha3 country code in MP Checkout callbacks
 * Fix: Modify force checkout logic used for MobilePay Checkout to enhance theme support.
-* Fix: WC_PensoPay_API_Transaction::get_brand removes prefixed penso_ when fallback to variables.
+* Fix: WC_BrickellPay_API_Transaction::get_brand removes prefixed penso_ when fallback to variables.
 * Fix: Refund now supports location header to avoid wrong response messages when capturing Klarna and Anyday payments.
 * Fix: Capture now supports location header to avoid wrong response messages when capturing Klarna and Anyday payments.
-* Dev: Add filter woocommerce_pensopay_transaction_params
-* Dev: Add filter woocommerce_pensopay_transaction_params_description
+* Dev: Add filter woocommerce_BrickellPay_transaction_params
+* Dev: Add filter woocommerce_BrickellPay_transaction_params_description
 * Feat: MobilePay Checkout now automatically ticks the terms and condition field during checkout.
 * Fix: PHP8 compatability
-* Fix: WC_PensoPay_API_Transaction::get_brand now falls back to variables.payment_methods sent from the shop if brand is empty on metadata.
+* Fix: WC_BrickellPay_API_Transaction::get_brand now falls back to variables.payment_methods sent from the shop if brand is empty on metadata.
 * Feature: Anyday split payments as payment gateway.
 * Feature: MobilePay Checkout now shows the description as copy in checkout/mobilepay-checkout.php by default which makes it easier by merchants to adjust their communication.
 
@@ -169,14 +169,14 @@ General:
 * Feature: New setting 'Complete order on capture callbacks' - Completes an order when a callback regarding a captured payment is received from QuickPay.
 * Feature: Add support for WCML country specific gateways added in WCML 4.10 (https://wpml.org/announcements/2020/08/wcml-4-10-currencies-and-payment-options-based-on-location/)
 * Change: Recurring payments are no longer synchronized due to ?synchronization being deprecated.
-* Fix: Undefined property: stdClass::$payment_method in WC_PensoPay_MobilePay_Checkout::callback_save_address
+* Fix: Undefined property: stdClass::$payment_method in WC_BrickellPay_MobilePay_Checkout::callback_save_address
 * Fix: Hide balance amount field when payment cannot be captured
 * Fix: Show MobilePay logo as "Method" in the order list
-* Breaking Change: Embedded / Overlay payments have been removed due to PSD2. Contact support@pensopay.com for questions regarding this decision.
-* Developer: Add filter woocommerce_pensopay_create_recurring_payment_data
-* Developer: Add filter woocommerce_pensopay_create_recurring_payment_data_{payment_gateway_id}
-* Developer: Add filter woocommerce_pensopay_callback_payment_authorized_complete_payment
-* Developer: Removed WC_PensoPay_Subscription::process_recurring_response as the logic has been refactored into hooks and callback handlers.
+* Breaking Change: Embedded / Overlay payments have been removed due to PSD2. Contact support@BrickellPay.com for questions regarding this decision.
+* Developer: Add filter woocommerce_BrickellPay_create_recurring_payment_data
+* Developer: Add filter woocommerce_BrickellPay_create_recurring_payment_data_{payment_gateway_id}
+* Developer: Add filter woocommerce_BrickellPay_callback_payment_authorized_complete_payment
+* Developer: Removed WC_BrickellPay_Subscription::process_recurring_response as the logic has been refactored into hooks and callback handlers.
 
 = 5.8.7 =
 * Add Anyday split
@@ -253,8 +253,8 @@ General:
 = 5.7.0 =
 * Feature: Add callback handler for recurring requests
 * Fix: Stop using WC_Subscriptions_Manager::process_subscription_payment_failure_on_order as this is deprecated.
-* Dev: Make synchronous recurring requests optional with the introduced filter: woocommerce_pensopay_set_synchronized_request
-* Dev: Blocked callbacks for recurring requests are now optional. Can be disabled with the filter: woocommerce_pensopay_block_callback
+* Dev: Make synchronous recurring requests optional with the introduced filter: woocommerce_BrickellPay_set_synchronized_request
+* Dev: Blocked callbacks for recurring requests are now optional. Can be disabled with the filter: woocommerce_BrickellPay_block_callback
 
 = 5.6.2 =
 * Fix: Add missing order payment box in backend for fbg1886, ideal, paypal and swish
@@ -269,10 +269,10 @@ General:
 * Feature: Add private key validation and success indicator next to the settings field - (requires permissions to read the private key via API)
 * Feature: Add button to flush the transaction cache from inside the plugin settings
 * Fix: Remove "Cancel" transaction on partially captured transactions as this action is not supported
-* Fix: MobilePay Checkout is now only creating users if user registration is required. The behavior can be modified via the filter woocommerce_pensopay_mobilepay_checkout_create_user
-* Fix: Stop performing capture logic on order completion when the orders is not paid with PensoPay
+* Fix: MobilePay Checkout is now only creating users if user registration is required. The behavior can be modified via the filter woocommerce_BrickellPay_mobilepay_checkout_create_user
+* Fix: Stop performing capture logic on order completion when the orders is not paid with BrickellPay
 * Fix: Add permission check on ajax endpoint for clearing logs
-* Fix: WC_PensoPay_Order::get_order_id_from_callback fallback now allows both prefixed and suffixed order numbers
+* Fix: WC_BrickellPay_Order::get_order_id_from_callback fallback now allows both prefixed and suffixed order numbers
 * Fix: Recurring payments not being cancellable
 * Improvement: Do not reuse cURL instances to avoid problems with some cPanel PHP upgrades where KeepAlive is disabled by default
 * Developer: Add the possibility to hide buttons for clearing logs and transaction cache via filters.
@@ -286,15 +286,15 @@ General:
 = 5.5.1 =
 * Fix: Proper printing of validation errors returned from the API.
 * Improvement: Distinguish between capture exceptions and API exception when adding runtime errors on capture requests.
-* Improvement: Add order ID to API error message on capture errors not caused specifically by the PensoPay_Capture_Exception.
-* Developer: Add PensoPay_Capture_Exception.
+* Improvement: Add order ID to API error message on capture errors not caused specifically by the BrickellPay_Capture_Exception.
+* Developer: Add BrickellPay_Capture_Exception.
 
 = 5.5.0 =
 * Add: Separate PayPal payment instance
-* Improvement: PayPal instance will, by default, strip cart items when sending data to PensoPay.
+* Improvement: PayPal instance will, by default, strip cart items when sending data to BrickellPay.
 
 = 5.4.2 =
-* Fix: Improvement of WC_PensoPay_Order::get_order_number_for_api to avoid errors if WC_PensoPay_Subscription::get_subscriptions_for_renewal_order returns no subscriptions.
+* Fix: Improvement of WC_BrickellPay_Order::get_order_number_for_api to avoid errors if WC_BrickellPay_Subscription::get_subscriptions_for_renewal_order returns no subscriptions.
 * Add: MasterCard ID Check logo
 
 = 5.4.1 =
@@ -307,9 +307,9 @@ General:
 * Feature: Persist payment capture errors on order completion to be shown in wp-admin.
 * Feature: Show error alert on manual capture failures from the order transaction box.
 * Feature: Show error alert on refund failures. This also blocks WooCommerce from refunding the order items if the refund fails.
-* Improvement: Pass the order object to woocommerce_pensopay_transaction_params_variables
+* Improvement: Pass the order object to woocommerce_BrickellPay_transaction_params_variables
 * Improvement: Send company name (if available) with shipping_address.name if no firstname/lastname has been set on the order.
-* Improvement: Remove object type casting on woocommerce_pensopay_automatic_shipping_address and woocommerce_pensopay_automatic_billing_address to allow NULL checks in the MP Checkout address saver helper methods.
+* Improvement: Remove object type casting on woocommerce_BrickellPay_automatic_shipping_address and woocommerce_BrickellPay_automatic_billing_address to allow NULL checks in the MP Checkout address saver helper methods.
 * Improvement: Convert all arrays to short syntax
 * Tested with WC 3.8.1
 
@@ -323,15 +323,15 @@ General:
 * Feature: iDEAL as separate payment method instance
 * Feature: Swish as separate payment method instance
 * Feature: FBG1886 as separate payment method instance
-* Feature: PensoPay - Extra - A flexible payment method instance which takes custom payment methods and icons from the settings panel. This can be used to offer i.e. Dankort payments through NETS if embedded payments are enabled on the main instance.
-* Feature: Possibility to disable cancellation of subscription transactions programmatically through 'woocommerce_pensopay_allow_subscription_transaction_cancellation'
+* Feature: BrickellPay - Extra - A flexible payment method instance which takes custom payment methods and icons from the settings panel. This can be used to offer i.e. Dankort payments through NETS if embedded payments are enabled on the main instance.
+* Feature: Possibility to disable cancellation of subscription transactions programmatically through 'woocommerce_BrickellPay_allow_subscription_transaction_cancellation'
 * Enhancement: Optimized images for Swish and Resurs.
 * Enhancement: Updates helper texts on embedded window and text_on_statement on the settings page
 * Enhancement: Only load the backend javascripts on relevant pages
 
 = 5.2.0 =
 * Feature: Add support for embedded payments through overlay with Clearhaus
-* Developer: Add action 'woocommerce_pensopay_callback_subscription_authorized' and 'woocommerce_pensopay_callback_payment_authorized' for easier way of handling authorized callbacks for specific transaction types.
+* Developer: Add action 'woocommerce_BrickellPay_callback_subscription_authorized' and 'woocommerce_BrickellPay_callback_payment_authorized' for easier way of handling authorized callbacks for specific transaction types.
 * Remove eDankort
 * Fix: Minor syntax-error in backend javascript
 
@@ -358,7 +358,7 @@ Remove recurs
 * Fix: Race condition that may cause a client to miss the success page on iFrame payments.
 
 = 5.1.1 =
-* Fix: Add fallback in WC_PensoPay_Subscription::process_recurring_response to save transaction ID in case WC_Order::payment_complete fails to do so.
+* Fix: Add fallback in WC_BrickellPay_Subscription::process_recurring_response to save transaction ID in case WC_Order::payment_complete fails to do so.
 * Fix: Add "needs payment" check on authorized subscription callbacks before creating a recurring payment.
 * Tested up to WC 3.6.5
 
@@ -369,36 +369,36 @@ Remove recurs
 * Fix: Minor helper text update for GA tracking ID on the settings page.
 * Fix: Add fallback for saving transaction IDs on orders since this seemed to randomly fail when using WC_Order::payment_complete to set it.
 * Tested up to WP 5.2.2
-* Dev - Add action: woocommerce_pensopay_meta_box_subscription_before_content
-* Dev - Add action: woocommerce_pensopay_meta_box_subscription_after_content
-* Dev - Add action: woocommerce_pensopay_meta_box_payment_before_content
-* Dev - Add action: woocommerce_pensopay_meta_box_payment_after_content
-* Dev - Add filter: woocommerce_pensopay_capture_on_order_completion
+* Dev - Add action: woocommerce_BrickellPay_meta_box_subscription_before_content
+* Dev - Add action: woocommerce_BrickellPay_meta_box_subscription_after_content
+* Dev - Add action: woocommerce_BrickellPay_meta_box_payment_before_content
+* Dev - Add action: woocommerce_BrickellPay_meta_box_payment_after_content
+* Dev - Add filter: woocommerce_BrickellPay_capture_on_order_completion
 
 = 5.0.0 =
 * Feature: Add Mobilepay Checkout support
 * Feature: Add Vipps
-* Feature: Add replaceable template file through woocommerce-pensopay/checkout/mobilepay-checkout.php
+* Feature: Add replaceable template file through woocommerce-BrickellPay/checkout/mobilepay-checkout.php
 * Feature: Add Resurs
 * Feature: Add Bitcoin
 * Tweak: Add capture callback handler for Sofort to properly handle transactions not sending authorized callbacks.
-* Tweak: Add filter: woocommerce_pensopay_callback_url
-* Tweak: Add action: woocommerce_pensopay_after_checkout_validation
-* Tweak: Add filter: woocommerce_pensopay_get_setting_{setting}
-* Tweak: Add action: woocommerce_pensopay_accepted_callback_before_processing
-* Tweak: Add action: woocommerce_pensopay_accepted_callback_before_processing_{operation}
-* Tweak: Add action: woocommerce_pensopay_save_automatic_addresses_before
-* Tweak: Add action: woocommerce_pensopay_save_automatic_addresses_after
-* Tweak: Add filter: woocommerce_pensopay_automatic_billing_address
-* Tweak: Add filter: woocommerce_pensopay_automatic_shipping_address
-* Tweak: Add filter: woocommerce_pensopay_automatic_formatted_address
-* Tweak: Add filter: woocommerce_pensopay_mobilepay_checkout_checkout_headline
-* Tweak: Add filter: woocommerce_pensopay_mobilepay_checkout_checkout_text
-* Tweak: Add filter: woocommerce_pensopay_mobilepay_checkout_button_theme
-* Tweak: Add filter: woocommerce_pensopay_mobilepay_checkout_button_size
+* Tweak: Add filter: woocommerce_BrickellPay_callback_url
+* Tweak: Add action: woocommerce_BrickellPay_after_checkout_validation
+* Tweak: Add filter: woocommerce_BrickellPay_get_setting_{setting}
+* Tweak: Add action: woocommerce_BrickellPay_accepted_callback_before_processing
+* Tweak: Add action: woocommerce_BrickellPay_accepted_callback_before_processing_{operation}
+* Tweak: Add action: woocommerce_BrickellPay_save_automatic_addresses_before
+* Tweak: Add action: woocommerce_BrickellPay_save_automatic_addresses_after
+* Tweak: Add filter: woocommerce_BrickellPay_automatic_billing_address
+* Tweak: Add filter: woocommerce_BrickellPay_automatic_shipping_address
+* Tweak: Add filter: woocommerce_BrickellPay_automatic_formatted_address
+* Tweak: Add filter: woocommerce_BrickellPay_mobilepay_checkout_checkout_headline
+* Tweak: Add filter: woocommerce_BrickellPay_mobilepay_checkout_checkout_text
+* Tweak: Add filter: woocommerce_BrickellPay_mobilepay_checkout_button_theme
+* Tweak: Add filter: woocommerce_BrickellPay_mobilepay_checkout_button_size
 * Tweak: Updates the MobilePay logo
-* Tweak: WC_PensoPay_Helper::get_callback_url now relies on home_url instead of site_url to ensure better compatibility with WPML.
-* Fix: WC_PensoPay_Address::get_street_name and WC_PensoPay_Address:get_house_extension throwning a warning if no house number is found on an address.
+* Tweak: WC_BrickellPay_Helper::get_callback_url now relies on home_url instead of site_url to ensure better compatibility with WPML.
+* Fix: WC_BrickellPay_Address::get_street_name and WC_BrickellPay_Address:get_house_extension throwning a warning if no house number is found on an address.
 * Remove: Remove non-CRUD data fetching for WC versions below 3.0.
 * Add: Bitcoin icon
 * Add: Swish icon
@@ -413,22 +413,22 @@ Remove recurs
 = 4.10.0 =
 * Add public admin notices infrastructure
 * Add possibility to manually create payment links for orders and subscriptions as WooCommerce admin.
-* Removes legacy WC_PensoPay_Order. Now only supports WC 3.x
-* Removes WC_PensoPay_Order_Base
-* Add filter: woocommerce_pensopay_order_action_create_payment_link_for_order
-* Add action: woocommerce_pensopay_order_action_payment_link_created
+* Removes legacy WC_BrickellPay_Order. Now only supports WC 3.x
+* Removes WC_BrickellPay_Order_Base
+* Add filter: woocommerce_BrickellPay_order_action_create_payment_link_for_order
+* Add action: woocommerce_BrickellPay_order_action_payment_link_created
 * Introduce customer email sent on manual payment link creation.
 
 = 4.9.4 =
 * Tested up to WC 3.4.2
-* Add arg (bool) $recurring to filter 'woocommerce_pensopay_order_number_for_api'
+* Add arg (bool) $recurring to filter 'woocommerce_BrickellPay_order_number_for_api'
 * Add methods to get street name used for Klarna
 * Add methods to get house number used for Klarna
 * Add methods to get house extension used for Klarna
 
 = 4.9.3 =
-* Add filter woocommerce_pensopay_transaction_fee_data
-* Clean up WC_PensoPay_Base_Order::add_transaction_fee
+* Add filter woocommerce_BrickellPay_transaction_fee_data
+* Clean up WC_BrickellPay_Base_Order::add_transaction_fee
 * Move WC compatibility headers from README to the plugin core file
 
 = 4.9.2 =
@@ -438,11 +438,11 @@ Remove recurs
 * Specify version number on static files in attempt to fix caching issues
 
 = 4.9.0 =
-* Fix: Add check if rates are not empty in WC_PensoPay_Base_Order::get_transaction_basket_params_line_helper
+* Fix: Add check if rates are not empty in WC_BrickellPay_Base_Order::get_transaction_basket_params_line_helper
 * Improvement: Remove shipping from the basket data and add it to the shipping data array instead
 * Improvement: Add mobile phone to invoice_address and shipping_address params.
 * Fix: Check transaction balance before 'capture on complete' and adjust the amount captured in case a partial capture has been performed already.
-* Improvement: Add WC_PensoPay_API::patch
+* Improvement: Add WC_BrickellPay_API::patch
 * Improvement: Better error explanation when refunding in-refundable transactions through the WooCommerce interface.
 * Add: Verified by Visa logo
 * Add: MasterCard SecureCode logo
@@ -452,31 +452,31 @@ Remove recurs
 * Improvement: Update PHP docs
 * Remove: Asynchronous loading of transaction data in the order overview to avoid hammering the backend with HTTP requests in case of large order views.
 * Add: Transaction data caching. Currently only used in order list view.
-* Add: Introducing filter woocommerce_pensopay_transaction_cache_enabled to enable/disable transaction caching. Defaults to true.
-* Add: Introducing filter woocommerce_pensopay_transaction_cache_expiration to control how long transactions are cached for. Defaults to one week.
+* Add: Introducing filter woocommerce_BrickellPay_transaction_cache_enabled to enable/disable transaction caching. Defaults to true.
+* Add: Introducing filter woocommerce_BrickellPay_transaction_cache_expiration to control how long transactions are cached for. Defaults to one week.
 * Improvement: Move transaction data in the order overview from the shipping_address column to a separate payment column. Includes an updated UI.
-* Add: Introducing hook woocommerce_pensopay_accepted_callback to target any accepted callback
+* Add: Introducing hook woocommerce_BrickellPay_accepted_callback to target any accepted callback
 * Remove: variables.plugin_version on payment creations.
 * Add: Shopsystem data to payment creations - name + version
-* Add: New filter 'woocommerce_pensopay_transaction_params_shopsystem'
+* Add: New filter 'woocommerce_BrickellPay_transaction_params_shopsystem'
 
 = 4.8.4 =
 * Add vat_rate to refund requests
 
 = 4.8.3 =
 * Add check for change_payment request in callback handler when authorizing new subscriptions to avoid subscriptions going into 'processing' limbo.
-* Update ard logos to svg according to the new payment window from PensoPay
+* Update ard logos to svg according to the new payment window from BrickellPay
 * Add iDEAL logo
 * Add UnionPay logo
 * Add Cirrus logo
 * Add BankAxess logo
-* Add filter: woocommerce_pensopay_checkout_gateway_icon_url
+* Add filter: woocommerce_BrickellPay_checkout_gateway_icon_url
 * Move client redirect for bulk actions inside permission check to avoid incorrect redirects for regular users.
 * Add additional checks for vat rates to avoid division by zero errors.
 * Update 'Test up to' to 4.9.0
 
 = 4.8.2 =
-* Add filter woocommerce_pensopay_order_number_for_api
+* Add filter woocommerce_BrickellPay_order_number_for_api
 * Change order of transaction ID meta key searches
 
 = 4.8.1 =
@@ -487,8 +487,8 @@ Remove recurs
 
 = 4.8.0 =
 * Add WooCommerce 3 compatibility release
-* Add filter woocommerce_pensopay_transaction_params_variables
-* Add filter woocommerce_pensopay_is_request_to_change_payment
+* Add filter woocommerce_BrickellPay_transaction_params_variables
+* Add filter woocommerce_BrickellPay_is_request_to_change_payment
 * Add subscription status check in the subscription_cancellation hook to avoid transactions being cancelled on subscriptions that are actually active.
 * Bulk action to retry failed payments and activate the subscription on successful captures.
 * Add transaction metadata accessor method
@@ -502,9 +502,9 @@ Remove recurs
 = 4.7.0 =
 * Minor settings helper text updates.
 * Add support for qTranslateX in the callback handler. Added logic to prevent browser redirects resulting in callback data loss.
-* WP-SpamShield - Bypass security check on PensoPay callbacks.
+* WP-SpamShield - Bypass security check on BrickellPay callbacks.
 * Improve product switching (downgrade/upgrade)
-* Fix syntax error in classes/updates/woocommerce-pensopay-update-4.6.php resulting in update not completing in case of caught exceptions.
+* Fix syntax error in classes/updates/woocommerce-BrickellPay-update-4.6.php resulting in update not completing in case of caught exceptions.
 * Remove obsolete Google Analytics Client ID setting.
 
 = 4.6.8 =
@@ -518,21 +518,21 @@ Remove recurs
 * Update translations
 
 = 4.6.5 =
-* Make WC_PensoPay_Views::get_view PHP 5.3 compatible.
+* Make WC_BrickellPay_Views::get_view PHP 5.3 compatible.
 * Patch cases where transaction ID was not always found on renewal orders.
 
 = 4.6.4 =
-* Fix issue with WC_PensoPay_Install not being included properly on plugin activation
+* Fix issue with WC_BrickellPay_Install not being included properly on plugin activation
 
 = 4.6.3 =
-* Remove: WC_PensoPay_Install_Helper
+* Remove: WC_BrickellPay_Install_Helper
 * Improvement: Stop relying on register_activation_hook when upgrading.
 * Improvement: Show admin notice when a database upgrade is required. This action must be triggered manually and it will run in the background.
 * Add views folder
-* Add WC_PensoPay_Views to simplify view handling.
+* Add WC_BrickellPay_Views to simplify view handling.
 
 = 4.6.2 =
-* Fix issue with older PHP version not bein able to use return value in write context in WC_PensoPay_Settings.
+* Fix issue with older PHP version not bein able to use return value in write context in WC_BrickellPay_Settings.
 
 = 4.6.1 =
 * Replaced Paii logo with Swipp
@@ -543,17 +543,17 @@ Remove recurs
 * Feature: Add Klarna as separate payment method.
 * Feature: Add Swipp as separate payment method.
 * Feature: Add Sofort as separate payment method
-* Feature: New filters added. (woocommerce_pensopay_transaction_params_shipping, woocommerce_pensopay_transaction_params_invoice, woocommerce_pensopay_transaction_params_basket)
+* Feature: New filters added. (woocommerce_BrickellPay_transaction_params_shipping, woocommerce_BrickellPay_transaction_params_invoice, woocommerce_BrickellPay_transaction_params_basket)
 * Feature: Visualize required settings on the settings page.
 * Feature: Add admin notice if required fields are not configured.
 * Feature: Add button in the plugin settings' "Logs"-section for easy debug log access.
 * Feature: Add direct link to the wiki from the settings page.
 * Feature: Add live API key validator on the settings page.
 * Feature: Simplifying the settings page by removing unused fields.
-* Feature: Add hook 'woocommerce_pensopay_loaded'.
-* Feature: Add hook 'woocommerce_pensopay_accepted_callback_status_{$state}'.
+* Feature: Add hook 'woocommerce_BrickellPay_loaded'.
+* Feature: Add hook 'woocommerce_BrickellPay_accepted_callback_status_{$state}'.
 * Removed: Autocapture settings for subscriptions. Subscriptions now rely on the main autocapture settings (Physical/virtual products).
-* Removed: WC_PensoPay_Order::get_callback_url - deprecated since 4.2.0.
+* Removed: WC_BrickellPay_Order::get_callback_url - deprecated since 4.2.0.
 * Bug: Remove subscription cancellation from callback handler, on 'cancel'-callbacks to avoid situations where subscriptions ends up in a faulty "Pending Cancellation" state.
 * Bug: Fix bug where fees area added on top of each other.
 * Bug: Clean up old payment IDs and payment links before creating a new payment link used to update a credit card. Legacy data caused problems in some cases.
@@ -562,30 +562,30 @@ Remove recurs
 
 = 4.5.6 =
 * Fix bug where certain customers are not able to manually pay a failed recurring order.
-* Add convenience wrapper WC_PensoPay_Subscription::cart_contains_failed_renewal_order_payment()
-* Add convenience wrapper WC_PensoPay_Subscription::get_subscription_for_renewal_order()
-* Add convenience wrapper WC_PensoPay_Subscription::get_subscriptions_for_order()
-* Add convenience wrapper WC_PensoPay_Subscription::cart_contains_renewal()
+* Add convenience wrapper WC_BrickellPay_Subscription::cart_contains_failed_renewal_order_payment()
+* Add convenience wrapper WC_BrickellPay_Subscription::get_subscription_for_renewal_order()
+* Add convenience wrapper WC_BrickellPay_Subscription::get_subscriptions_for_order()
+* Add convenience wrapper WC_BrickellPay_Subscription::cart_contains_renewal()
 * Add ?synchronized query parameter to recurring requests.
-* Add WC_PensoPay_Order::get_payment_method_change_count()
-* Add WC_PensoPay_Order::increase_payment_method_change_count()
+* Add WC_BrickellPay_Order::get_payment_method_change_count()
+* Add WC_BrickellPay_Order::increase_payment_method_change_count()
 * Hook into woocommerce_subscription_payment_method_updated_to_*
 * Use $order->update_status on failed recurring payments instead of WC_Subscriptions_Manager::process_subscription_payment_failure_on_order to get a correct count of failed payments.
-* Append the payment count (or timestamp to ensure backwards compatibility) to the order numbers sent to the PensoPay API when manually paying a failed recurring order.
+* Append the payment count (or timestamp to ensure backwards compatibility) to the order numbers sent to the BrickellPay API when manually paying a failed recurring order.
 
 = 4.5.5 =
 * Fix: Problem with fees being incorrectly stored when using custom decimal pointers. Rely on wp_format_decimals.
 
 = 4.5.4 =
 * Add support for subscription_payment_method_change_customer
-* Add transaction state check in WC_PensoPay::subscription_cancel
-* Add WC_PensoPay_Order::is_request_to_change_payment()
+* Add transaction state check in WC_BrickellPay::subscription_cancel
+* Add WC_BrickellPay_Order::is_request_to_change_payment()
 
 = 4.5.3 =
 * Add possibility to disable transaction information in the order overview
-* Fix bug in WC_PensoPay_Helper::price_multiply which didn't properly format prices where are not standard English format.
-* Add WC_PensoPay_Helper::price_multiplied_to_float
-* Add WC_PensoPay_Helper::price_custom_to_multiplied
+* Fix bug in WC_BrickellPay_Helper::price_multiply which didn't properly format prices where are not standard English format.
+* Add WC_BrickellPay_Helper::price_multiplied_to_float
+* Add WC_BrickellPay_Helper::price_custom_to_multiplied
 * Add unit tests and composer.json to repository
 
 = 4.5.2 =
@@ -595,28 +595,28 @@ Remove recurs
 * Fix problems with some merchants experiencing failed orders after successful payments.
 
 = 4.5.0 =
-* Add WC_PensoPay_Order::has_pensopay_payment().
-* Add WC_PensoPay_API_Transaction::get_brand().
-* Add WC_PensoPay_API_Transaction::get_currency().
-* Add WC_PensoPay_API_Transaction::get_balance().
-* Add WC_PensoPay_API_Transaction::get_formatted_balance().
-* Add WC_PensoPay_API_Transaction::get_remaining_balance().
-* Add WC_PensoPay_API_Transaction::get_formatted_remaining_balance().
-* Add WC_PensoPay_API_Transaction::is_operation_approved( $operation ).
-* Add WC_PensoPay::plugins_url.
-* Add WC_PensoPay_Helper::has_preorder_plugin.
+* Add WC_BrickellPay_Order::has_BrickellPay_payment().
+* Add WC_BrickellPay_API_Transaction::get_brand().
+* Add WC_BrickellPay_API_Transaction::get_currency().
+* Add WC_BrickellPay_API_Transaction::get_balance().
+* Add WC_BrickellPay_API_Transaction::get_formatted_balance().
+* Add WC_BrickellPay_API_Transaction::get_remaining_balance().
+* Add WC_BrickellPay_API_Transaction::get_formatted_remaining_balance().
+* Add WC_BrickellPay_API_Transaction::is_operation_approved( $operation ).
+* Add WC_BrickellPay::plugins_url.
+* Add WC_BrickellPay_Helper::has_preorder_plugin.
 * Feature: Add support for WooCommerce Pre Orders
 * Feature: Add Card icons to transaction meta data. Issue #62986808298852.
 * Feature: Add possibility to capture a specified amount and not only the full order amount.
-* Add Translation template (woo-pensopay.pot).
+* Add Translation template (woo-BrickellPay.pot).
 * Fix: Meta-box being shown when any transactionID if mapped on the order. Issue #145750965321211.
 * Fix: Avoid multiple hooks and filters. Thanks to David Tolnem for investigating and providing code example.
 * Improvement: Compressed PNG card icons.
 * Improvement: Update existing payment links on process payment.
 * Improvement: Stop clearing the customer basket on payment processing. This step has been moved to "thank_you"-page.
 * Improvement: Update translations.
-* Rename WC_PensoPay_API_Transaction::create_link to WC_PensoPay_API_Transaction::patch_link.
-* Remove: WC_PensoPay::prepare_extras()
+* Rename WC_BrickellPay_API_Transaction::create_link to WC_BrickellPay_API_Transaction::patch_link.
+* Remove: WC_BrickellPay::prepare_extras()
 
 = 4.4.5 =
 * Add support for multiple subscriptions.
@@ -625,7 +625,7 @@ Remove recurs
 * Fix problem with Paii attempted to be loaded after removal.
 
 = 4.4.3 =
-* Only make transaction status checks on orders with _transaction_id AND payment methods 'pensopay', 'mobilepay' and 'viabill'
+* Only make transaction status checks on orders with _transaction_id AND payment methods 'BrickellPay', 'mobilepay' and 'viabill'
 * Remove Paii gateway instance
 
 = 4.4.2 =
@@ -642,25 +642,25 @@ Remove recurs
 
 = 4.4.0 =
 * Update translations
-* Change PensoPay_Helper::get_callback_url() to use site_url instead of home_url. This ensures callbacks to always reach the Wordpress core.
-* Add WC_PensoPay_Subscription as convenience wrapper
+* Change BrickellPay_Helper::get_callback_url() to use site_url instead of home_url. This ensures callbacks to always reach the Wordpress core.
+* Add WC_BrickellPay_Subscription as convenience wrapper
 * Support for WooCommerce Subscriptions > 2.x
 * Removed support for WooCommerce Subscriptions 1.x.x
 * Refactor the method for checking if WC Subscriptions is enabled to support flexible folder names.
 * Deprecate the TRANSACTION_ID meta tag.
-* Refactor WC_PensoPay_Order::get_transaction_id - rely on the built in transaction ID if available.
-* Rely on WC_PensoPay::scheduled_subscription_payment() when creating the initial subscription payment.
-* Add curl_request_url to WC_PensoPay_Exception to optimize troubleshooting.
+* Refactor WC_BrickellPay_Order::get_transaction_id - rely on the built in transaction ID if available.
+* Rely on WC_BrickellPay::scheduled_subscription_payment() when creating the initial subscription payment.
+* Add curl_request_url to WC_BrickellPay_Exception to optimize troubleshooting.
 * Add possibility to clear the debug logs.
 
 = 4.3.5 =
-* Add: WC_PensoPay_API_Subscriptions::process_recurring_response().
+* Add: WC_BrickellPay_API_Subscriptions::process_recurring_response().
 * Fix: First autocapture on subscriptions not working.
 * Fix: Problems with recurring payment references not working properly.
 * Remove: recurring from callback_handler switch.
 
 = 4.3.4 =
-* Minor update to WC_PensoPay_Order::get_clean_order_number() to prevent hash-tags in order numbers, which is occasionally added by some shops.
+* Minor update to WC_BrickellPay_Order::get_clean_order_number() to prevent hash-tags in order numbers, which is occasionally added by some shops.
 
 = 4.3.3 =
 * Change method descriptions.
@@ -675,14 +675,14 @@ Remove recurs
 = 4.3 =
 * Tweak: Refactor filter: woocommerce_order_status_completed. Now using the passed post_id.
 * Feature: Add setting, checkout_button_text - button text shown when choosing payment.
-* Feature: Add property WC_PensoPay::$order_button_text.
-* Feature: Add WC_PensoPay_Install to handle DB updates for this and future versions.
-* Feature: Add setting, pensopay_autocapture_virtual - Makes it possible for you to set a different autocapture configuration for virtual products. If the order contains both a virtual and a non-virtual product, it will default to the configuration set in "pensopay_autocapture".
-* Add filter: woocommerce_pensopay_transaction_link_params.
+* Feature: Add property WC_BrickellPay::$order_button_text.
+* Feature: Add WC_BrickellPay_Install to handle DB updates for this and future versions.
+* Feature: Add setting, BrickellPay_autocapture_virtual - Makes it possible for you to set a different autocapture configuration for virtual products. If the order contains both a virtual and a non-virtual product, it will default to the configuration set in "BrickellPay_autocapture".
+* Add filter: woocommerce_BrickellPay_transaction_link_params.
 * Fix: Paii specific settings (category, reference_title, product_id).
-* Remove: WC_PensoPay_Helper::prefix_order_number().
+* Remove: WC_BrickellPay_Helper::prefix_order_number().
 * Feature: Support "WooCommerce Sequential Order Numbers" order number prefix/suffix.
-* Remove: WC_PensoPay::find_order_by_order_number() - rely on the post ID now stored on the transaction.
+* Remove: WC_BrickellPay::find_order_by_order_number() - rely on the post ID now stored on the transaction.
 * Fix: Remove currency from recurring requests
 * Feature: Add support for text_on_statement for Clearhaus customers.
 * Feature: Add customer_email to payment/subscription links. (Used for PayPal transactions).
@@ -692,9 +692,9 @@ Remove recurs
 
 = 4.2.2 =
 * Fix: Payment icons not working in WooCommerce 2.4.
-* Fix: JSON encode and typecast error objects in case no specific error message is set from PensoPay
+* Fix: JSON encode and typecast error objects in case no specific error message is set from BrickellPay
 * Fix: Add additional params to http_build_query to support server setups requirering param 2+3 to work properly
-* Fix: Remove obosolete pensopay_paybuttontext setting from instances
+* Fix: Remove obosolete BrickellPay_paybuttontext setting from instances
 * Tweak: Move woocommerce_order_complete hook outside is_admin check
 * Tweak: Add post data params to API exceptions
 * Tweak: Wrap process payment in try/catch and write any errors to WC system logs.
@@ -705,11 +705,11 @@ Remove recurs
 * Update translations
 
 = 4.2.0 =
-* Deprecating WC_PensoPay::get_callback_url(). Use WC_PensoPay_Helper::get_callback_url() instead.
-* Add PensoPay-Callback-Url to API request headers.
+* Deprecating WC_BrickellPay::get_callback_url(). Use WC_BrickellPay_Helper::get_callback_url() instead.
+* Add BrickellPay-Callback-Url to API request headers.
 * Correct name casing in title and descriptions.
 * Add method_title to instances
-* Prefix subinstances with "PensoPay - %s" for usability reasons.
+* Prefix subinstances with "BrickellPay - %s" for usability reasons.
 * Disable subscription support on MobilePay, Paii and ViaBill
 * Add support for payment links. Removing old FORM method.
 * Add tooltip descriptions to settings page
@@ -717,11 +717,11 @@ Remove recurs
 * Add jQuery multiselect to 'Credit card icons'
 * Change subscription description from "qp_subscription" to "woocommerce-subscription"
 * Removed all settings and files related to the auto-redirect.
-* Remove setting: pensopay_merchantid
-* Remove setting: pensopay_redirect
-* Remove setting: pensopay_redirectText
-* Remove setting: pensopay_paybuttontext
-* Add setting: pensopay_custom_variables
+* Remove setting: BrickellPay_merchantid
+* Remove setting: BrickellPay_redirect
+* Remove setting: BrickellPay_redirectText
+* Remove setting: BrickellPay_paybuttontext
+* Add setting: BrickellPay_custom_variables
 * Remove old tags before 3.0.6
 
 = 4.1.0 =
@@ -730,12 +730,12 @@ Remove recurs
 * Add complete order reference in order overview
 * Add version number to the plugin settings page
 * Add support for multiple instances. Now it is possible to add MobilePay, Paii and viaBill as separate payment methods. Each instance is based on the core module settings to ensure a minimum amount of configuration.
-* Add setting: pensopay_redirect - allows the shop owner to enable/disable the auto redirection in the checkout process.
-* Remove setting: pensopay_mobilepay
-* Remove setting: pensopay_viabill
-* Remove setting: pensopay_labelCreditCard
-* Remove setting: pensopay_labelViaBill
-* Remove setting: pensopay_debug
+* Add setting: BrickellPay_redirect - allows the shop owner to enable/disable the auto redirection in the checkout process.
+* Remove setting: BrickellPay_mobilepay
+* Remove setting: BrickellPay_viabill
+* Remove setting: BrickellPay_labelCreditCard
+* Remove setting: BrickellPay_labelViaBill
+* Remove setting: BrickellPay_debug
 * Fix problem with attempt of payment capture when setting order status to complete on a subscription order.
 * Updated translations
 
@@ -756,26 +756,26 @@ Remove recurs
 * Stop forcing HTTP on callbacks.
 
 = 4.0.3 =
-* Add WC_PensoPay_API_Subscription::is_action_allowed
+* Add WC_BrickellPay_API_Subscription::is_action_allowed
 * Manual AJAX actions handled for subscriptions
 
 = 4.0.2 =
 * Add mobilepay option
-* Disabled viabill since the PensoPay API is not ready to support it yet.
+* Disabled viabill since the BrickellPay API is not ready to support it yet.
 
 = 4.0.1 =
 * Add version parameter to the payment request
 
 = 4.0.0 =
-* Now only supports the new PensoPay gateway platform
-* Introduce exception class PensoPay_Exception
-* Introduce exception class PensoPay_API_Exception
-* Introduce WC_PensoPay::process_refund to support "auto" gateway refunds
-* Introduce WC_PensoPay_API
-* Introduce WC_PensoPay_API_Payment
-* Introduce WC_PensoPay_API_Subscription
-* Introduce WC_PensoPay_Log - Debugging information is now added to WooCommerce system logs.
-* Remove WC_PensoPay_Request
+* Now only supports the new BrickellPay gateway platform
+* Introduce exception class BrickellPay_Exception
+* Introduce exception class BrickellPay_API_Exception
+* Introduce WC_BrickellPay::process_refund to support "auto" gateway refunds
+* Introduce WC_BrickellPay_API
+* Introduce WC_BrickellPay_API_Payment
+* Introduce WC_BrickellPay_API_Subscription
+* Introduce WC_BrickellPay_Log - Debugging information is now added to WooCommerce system logs.
+* Remove WC_BrickellPay_Request
 * Remove donation link
 
 = 3.0.9 =
@@ -791,8 +791,8 @@ Remove recurs
 * Bugfix: 502 on checkout on shops hosted with wpengine.com.
 
 = 3.0.4 =
-* Add filter 'woocommerce_pensopay_currency' which can be used to dynamically edit the gateway currency
-* Add filter 'woocommerce_pensopay_language' which can be used to dynamically edit the gateway language
+* Add filter 'woocommerce_BrickellPay_currency' which can be used to dynamically edit the gateway currency
+* Add filter 'woocommerce_BrickellPay_language' which can be used to dynamically edit the gateway language
 
 = 3.0.3 =
 * Added support for credit card icons in the settings.
@@ -832,11 +832,11 @@ Remove recurs
 * Fixed an undefined variable notices
 * Switched from WC_Subscriptions_Order::get_price_per_period to WC_Subscriptions_Order::get_recurring_total
 * Added payment transaction fee to orders
-* Changed name to WooCommerce PensoPay
+* Changed name to WooCommerce BrickellPay
 
 = 2.1.1 =
 * Fixes FATAL ERROR bug on checkout introduced in 2.1.0
-* Plugin URI in gateway-pensopay.php
+* Plugin URI in gateway-BrickellPay.php
 
 = 2.1.0 =
 * Bugfix: Static call to a non-static method caused strict errors.
@@ -850,9 +850,9 @@ Remove recurs
 * Fixed viabill cardtypelock
 
 = 2.0.7 =
-* Fixed bug where server complains about PensoPay SSL certificate.
+* Fixed bug where server complains about BrickellPay SSL certificate.
 * Changed iBill labels to viaBill
-* Added the possibility to set a custom text on the checkout page right before the customer is redirected to the PensoPay payment window.
+* Added the possibility to set a custom text on the checkout page right before the customer is redirected to the BrickellPay payment window.
 * Added the possibility to set a custom label to credit card and viaBill.
 
 = 2.0.6 =
@@ -860,7 +860,7 @@ Remove recurs
 * Fixed undefined variable notice "params_string".
 
 = 2.0.4 =
-* Implemented a tweak to the "WooCommerce Sequential Order Numbers"-support which should fix any problems with WooCommerce PensoPay + Sequential order numbers.
+* Implemented a tweak to the "WooCommerce Sequential Order Numbers"-support which should fix any problems with WooCommerce BrickellPay + Sequential order numbers.
 
 = 2.0.3 =
 * Fixing issues with cardtypelocks
@@ -876,14 +876,14 @@ Remove recurs
 * Refactoring the majority of existing methods to save a lot of code and implementing better API error handling.
 
 = 1.4.0 =
-* Implement WC_PensoPay::create_md5() which manually sets the order of the md5 checkpoints.
+* Implement WC_BrickellPay::create_md5() which manually sets the order of the md5 checkpoints.
 * Should fix payment integration and missing mails sent out to customers after implementation of protocol v7.
 
 = 1.3.11 =
-* Plugin now uses PensoPay version 7
+* Plugin now uses BrickellPay version 7
 
 = 1.3.10 =
-* Feature: Allow customers to select between credit card and iBill when choosing PensoPay as pay method. Credit card is ticket as default option. 		NB: You are required to have an agreement with iBill in order to use this feature properly.
+* Feature: Allow customers to select between credit card and iBill when choosing BrickellPay as pay method. Credit card is ticket as default option. 		NB: You are required to have an agreement with iBill in order to use this feature properly.
 
 = 1.3.9 =
 * 'Capture on complete' now also works on bulk actions.
@@ -920,7 +920,7 @@ Remove recurs
 * Bugfix: Capturing payments from WooCommerce backend caused problems due to missing order_total param in cURL request.
 
 = 1.2.1 =
-* More minor changes to the payment cancellations from PensoPay form.
+* More minor changes to the payment cancellations from BrickellPay form.
 
 = 1.2.0 =
 * Major rewriting of payments cancelled by customer.
@@ -940,7 +940,7 @@ Remove recurs
 * Implemented payment state and transaction id in order overview.
 * Implemented payment handling in single order view.
 * Added support for split payments
-* If turned on in PensoPay Manager, shop owners may now split up the transactions.
+* If turned on in BrickellPay Manager, shop owners may now split up the transactions.
 * Rewritten and added a lot of the class methods.
 
 = 1.0.1 =

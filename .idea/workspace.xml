@@ -4,7 +4,44 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="302bbbe3-80be-4d28-9b42-80cfa0f272d3" name="Changes" comment="" />
+    <list default="true" id="302bbbe3-80be-4d28-9b42-80cfa0f272d3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/instances/anyday.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/instances/anyday.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/instances/apple-pay.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/instances/apple-pay.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/instances/fbg1886.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/instances/fbg1886.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/instances/google-pay.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/instances/google-pay.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/instances/ideal.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/instances/ideal.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/instances/klarna-payments.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/instances/klarna-payments.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/instances/klarna.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/instances/klarna.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/instances/mobilepay-subscriptions.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/instances/mobilepay-subscriptions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/instances/mobilepay.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/instances/mobilepay.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/instances/paypal.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/instances/paypal.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/instances/pensopay-extra.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/instances/pensopay-extra.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/instances/resurs.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/instances/resurs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/instances/sofort.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/instances/sofort.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/instances/swish.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/instances/swish.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/instances/trustly.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/instances/trustly.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/instances/viabill.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/instances/viabill.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/instances/vipps.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/instances/vipps.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/woocommerce-pensopay-address.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/woocommerce-pensopay-address.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/woocommerce-pensopay-settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/woocommerce-pensopay-settings.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/woocommerce-pensopay-virtualterminal-payment.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/woocommerce-pensopay-virtualterminal-payment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helpers/notices.php" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/notices.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/woo-pensopay-da_DK.mo" beforeDir="false" afterPath="$PROJECT_DIR$/languages/woo-pensopay-da_DK.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/woo-pensopay-da_DK.po" beforeDir="false" afterPath="$PROJECT_DIR$/languages/woo-pensopay-da_DK.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/woo-pensopay-de_DE.mo" beforeDir="false" afterPath="$PROJECT_DIR$/languages/woo-pensopay-de_DE.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/woo-pensopay-de_DE.po" beforeDir="false" afterPath="$PROJECT_DIR$/languages/woo-pensopay-de_DE.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/woo-pensopay-es_ES.mo" beforeDir="false" afterPath="$PROJECT_DIR$/languages/woo-pensopay-es_ES.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/woo-pensopay-es_ES.po" beforeDir="false" afterPath="$PROJECT_DIR$/languages/woo-pensopay-es_ES.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/woo-pensopay-sv_SE.mo" beforeDir="false" afterPath="$PROJECT_DIR$/languages/woo-pensopay-sv_SE.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/woo-pensopay-sv_SE.po" beforeDir="false" afterPath="$PROJECT_DIR$/languages/woo-pensopay-sv_SE.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/woo-pensopay.pot" beforeDir="false" afterPath="$PROJECT_DIR$/languages/woo-pensopay.pot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/html-notice-update.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/html-notice-update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/html-notice-upgrading.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/html-notice-upgrading.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/woocommerce-pensopay.php" beforeDir="false" afterPath="$PROJECT_DIR$/woocommerce-brickellpay.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,7 +65,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "E:/3.Project/Wordpress/woocommerce-pensopay",
+    "last_opened_file_path": "C:/xampp/htdocs/wordpress/wp-content/plugins/brickellpaymentgateway-plugin",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -59,6 +96,8 @@
       <workItem from="1720082790460" duration="3578000" />
       <workItem from="1720092152107" duration="3987000" />
       <workItem from="1720156460439" duration="48000" />
+      <workItem from="1720156624111" duration="335000" />
+      <workItem from="1720157293094" duration="3022000" />
     </task>
     <servers />
   </component>
