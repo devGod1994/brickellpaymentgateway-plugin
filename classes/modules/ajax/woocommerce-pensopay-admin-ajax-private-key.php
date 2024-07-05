@@ -18,7 +18,7 @@ class WC_PensoPay_Admin_Ajax_Private_Key extends WC_PensoPay_Admin_Ajax_Action {
 
 			$api_key = $_POST['api_key'];
 
-			$api = new WC_PensoPay_API( $api_key );
+			$api = new WC_BrickellPay_API( $api_key );
 
 			$response = $api->get( 'account/private-key' );
 

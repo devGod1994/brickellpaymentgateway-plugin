@@ -12,7 +12,7 @@
  * @docs        http://tech.quickpay.net/api/services/?scope=merchant
  */
 
-class WC_PensoPay_API_Transaction extends WC_PensoPay_API {
+class WC_BrickellPay_API_Transaction extends WC_BrickellPay_API {
 
 	/**
 	 * @var bool
@@ -26,13 +26,13 @@ class WC_PensoPay_API_Transaction extends WC_PensoPay_API {
 	 *
 	 * @access public
 	 * @return string
-	 * @throws PensoPay_API_Exception
+	 * @throws BrickellPay_API_Exception
 	 */
 	public function get_current_type(): string {
 		$last_operation = $this->get_last_operation();
 
 		if ( ! is_object( $last_operation ) ) {
-			throw new PensoPay_API_Exception( "Malformed operation response", 0 );
+			throw new BrickellPay_API_Exception( "Malformed operation response", 0 );
 		}
 
 		return $last_operation->type;
@@ -45,11 +45,11 @@ class WC_PensoPay_API_Transaction extends WC_PensoPay_API {
 	 *
 	 * @access public
 	 * @return string
-	 * @throws PensoPay_API_Exception
+	 * @throws BrickellPay_API_Exception
 	 */
 	public function is_accepted(): string {
 		if ( ! is_object( $this->resource_data ) ) {
-			throw new PensoPay_API_Exception( 'No API payment resource data available.', 0 );
+			throw new BrickellPay_API_Exception( 'No API payment resource data available.', 0 );
 		}
 
 		return $this->resource_data->accepted;
@@ -62,11 +62,11 @@ class WC_PensoPay_API_Transaction extends WC_PensoPay_API {
 	 *
 	 * @access public
 	 * @return stdClass
-	 * @throws PensoPay_API_Exception
+	 * @throws BrickellPay_API_Exception
 	 */
 	public function get_last_operation() {
 		if ( ! is_object( $this->resource_data ) ) {
-			throw new PensoPay_API_Exception( 'No API payment resource data available.', 0 );
+			throw new BrickellPay_API_Exception( 'No API payment resource data available.', 0 );
 		}
 
 		// Loop through all the operations and return only the operations that were successful (based on the qp_status_code and pending mode).
@@ -77,7 +77,7 @@ class WC_PensoPay_API_Transaction extends WC_PensoPay_API {
 		$last_operation = end( $successful_operations );
 
 		if ( ! is_object( $last_operation ) ) {
-			throw new PensoPay_API_Exception( 'Malformed operation object' );
+			throw new BrickellPay_API_Exception( 'Malformed operation object' );
 		}
 
 		if ( wc_string_to_bool( $last_operation->pending ) ) {
@@ -91,11 +91,11 @@ class WC_PensoPay_API_Transaction extends WC_PensoPay_API {
 	 * @param $type
 	 *
 	 * @return mixed|null
-	 * @throws PensoPay_API_Exception
+	 * @throws BrickellPay_API_Exception
 	 */
 	public function get_last_operation_of_type( $type ) {
 		if ( ! is_object( $this->resource_data ) ) {
-			throw new PensoPay_API_Exception( 'No API payment resource data available.', 0 );
+			throw new BrickellPay_API_Exception( 'No API payment resource data available.', 0 );
 		}
 
 		$operations = array_reverse( $this->resource_data->operations );
@@ -116,11 +116,11 @@ class WC_PensoPay_API_Transaction extends WC_PensoPay_API {
 	 *
 	 * @access public
 	 * @return boolean
-	 * @throws PensoPay_API_Exception
+	 * @throws BrickellPay_API_Exception
 	 */
 	public function is_test(): bool {
 		if ( ! is_object( $this->resource_data ) ) {
-			throw new PensoPay_API_Exception( 'No API payment resource data available.', 0 );
+			throw new BrickellPay_API_Exception( 'No API payment resource data available.', 0 );
 		}
 
 		return (bool) $this->resource_data->test_mode;
@@ -136,7 +136,7 @@ class WC_PensoPay_API_Transaction extends WC_PensoPay_API {
 	 * @param WC_PensoPay_Order $order
 	 *
 	 * @return object
-	 * @throws PensoPay_API_Exception
+	 * @throws BrickellPay_API_Exception
 	 */
 	public function create( WC_Order $order ) {
 		$base_params = [
@@ -165,7 +165,7 @@ class WC_PensoPay_API_Transaction extends WC_PensoPay_API {
 	 * @param WC_Order $order
 	 *
 	 * @return object
-	 * @throws PensoPay_API_Exception
+	 * @throws BrickellPay_API_Exception
 	 * @since  4.5.0
 	 * @access public
 	 *
@@ -198,7 +198,7 @@ class WC_PensoPay_API_Transaction extends WC_PensoPay_API {
 	 * @param WC_Order $order
 	 *
 	 * @return object
-	 * @throws PensoPay_API_Exception
+	 * @throws BrickellPay_API_Exception
 	 */
 	public function patch_payment( $transaction_id, WC_Order $order ) {
 		$base_params = [
@@ -221,12 +221,12 @@ class WC_PensoPay_API_Transaction extends WC_PensoPay_API {
 	 * Returns the payment type / card type used on the transaction
 	 *
 	 * @return mixed
-	 * @throws PensoPay_API_Exception
+	 * @throws BrickellPay_API_Exception
 	 * @since  4.5.0
 	 */
 	public function get_brand() {
 		if ( ! is_object( $this->resource_data ) ) {
-			throw new PensoPay_API_Exception( 'No API payment resource data available.', 0 );
+			throw new BrickellPay_API_Exception( 'No API payment resource data available.', 0 );
 		}
 
 		if ( ! empty( $this->resource_data->metadata->brand ) ) {
@@ -234,7 +234,7 @@ class WC_PensoPay_API_Transaction extends WC_PensoPay_API {
 		}
 
 		if ( ! empty( $this->resource_data->variables->payment_method ) ) {
-			return str_replace( 'pensopay_', '', $this->resource_data->variables->payment_method );
+			return str_replace( 'brickellpay_', '', $this->resource_data->variables->payment_method );
 		}
 
 		if ( ! empty( $this->resource_data->link->payment_methods ) ) {
@@ -246,12 +246,12 @@ class WC_PensoPay_API_Transaction extends WC_PensoPay_API {
 	 * Returns the transaction balance
 	 *
 	 * @return mixed
-	 * @throws PensoPay_API_Exception
+	 * @throws BrickellPay_API_Exception
 	 * @since  4.5.0
 	 */
 	public function get_balance() {
 		if ( ! is_object( $this->resource_data ) ) {
-			throw new PensoPay_API_Exception( 'No API payment resource data available.', 0 );
+			throw new BrickellPay_API_Exception( 'No API payment resource data available.', 0 );
 		}
 
 		return ! empty( $this->resource_data->balance ) ? $this->resource_data->balance : null;
@@ -263,12 +263,12 @@ class WC_PensoPay_API_Transaction extends WC_PensoPay_API {
 	 * Returns a transaction currency
 	 *
 	 * @return mixed
-	 * @throws PensoPay_API_Exception
+	 * @throws BrickellPay_API_Exception
 	 * @since  4.5.0
 	 */
 	public function get_currency() {
 		if ( ! is_object( $this->resource_data ) ) {
-			throw new PensoPay_API_Exception( 'No API payment resource data available.', 0 );
+			throw new BrickellPay_API_Exception( 'No API payment resource data available.', 0 );
 		}
 
 		return $this->resource_data->currency;
@@ -280,7 +280,7 @@ class WC_PensoPay_API_Transaction extends WC_PensoPay_API {
 	 * Returns a formatted transaction balance
 	 *
 	 * @return mixed
-	 * @throws PensoPay_API_Exception
+	 * @throws BrickellPay_API_Exception
 	 * @since  4.5.0
 	 */
 	public function get_formatted_remaining_balance() {
@@ -289,7 +289,7 @@ class WC_PensoPay_API_Transaction extends WC_PensoPay_API {
 
     /**
      * @return float|int|mixed|null
-     * @throws PensoPay_API_Exception
+     * @throws BrickellPay_API_Exception
      */
     public function get_remaining_balance_as_float() {
         $remaining_balance = $this->get_remaining_balance();
@@ -307,7 +307,7 @@ class WC_PensoPay_API_Transaction extends WC_PensoPay_API {
 	 * Returns a remaining balance
 	 *
 	 * @return mixed
-	 * @throws PensoPay_API_Exception
+	 * @throws BrickellPay_API_Exception
 	 * @since  4.5.0
 	 */
 	public function get_remaining_balance() {
@@ -349,12 +349,12 @@ class WC_PensoPay_API_Transaction extends WC_PensoPay_API {
 	 * Returns the metadata of a transaction
 	 *
 	 * @return mixed
-	 * @throws PensoPay_API_Exception
+	 * @throws BrickellPay_API_Exception
 	 * @since  4.5.0
 	 */
 	public function get_metadata() {
 		if ( ! is_object( $this->resource_data ) ) {
-			throw new PensoPay_API_Exception( 'No API payment resource data available.', 0 );
+			throw new BrickellPay_API_Exception( 'No API payment resource data available.', 0 );
 		}
 
 		return $this->resource_data->metadata;
@@ -366,12 +366,12 @@ class WC_PensoPay_API_Transaction extends WC_PensoPay_API {
 	 * Returns the current transaction state
 	 *
 	 * @return mixed
-	 * @throws PensoPay_API_Exception
+	 * @throws BrickellPay_API_Exception
 	 * @since  4.5.0
 	 */
 	public function get_state() {
 		if ( ! is_object( $this->resource_data ) ) {
-			throw new PensoPay_API_Exception( 'No API payment resource data available.', 0 );
+			throw new BrickellPay_API_Exception( 'No API payment resource data available.', 0 );
 		}
 
 		return $this->resource_data->state;
@@ -386,7 +386,7 @@ class WC_PensoPay_API_Transaction extends WC_PensoPay_API {
 	 * @param        $transaction_id
 	 *
 	 * @return object|stdClass
-	 * @throws PensoPay_API_Exception
+	 * @throws BrickellPay_API_Exception
 	 * @throws PensoPay_Exception
 	 */
 	public function maybe_load_transaction_from_cache( $transaction_id ) {

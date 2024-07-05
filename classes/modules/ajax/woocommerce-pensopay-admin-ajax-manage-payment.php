@@ -38,11 +38,11 @@ class WC_PensoPay_Admin_Ajax_Manage_Payment extends WC_PensoPay_Admin_Ajax_Actio
 						// Call the action method and parse the transaction id and order object
 						$payment->$param_action( $transaction_id, $order, WC_PensoPay_Helper::price_multiplied_to_float( $amount, $payment->get_currency() ) );
 					} else {
-						throw new PensoPay_API_Exception( sprintf( "Unsupported action: %s.", $param_action ) );
+						throw new BrickellPay_API_Exception( sprintf( "Unsupported action: %s.", $param_action ) );
 					}
 				} // The action was not allowed. Throw an exception
 				else {
-					throw new PensoPay_API_Exception( sprintf( "Action: \"%s\", is not allowed for order #%d, with type state \"%s\"", $param_action, WC_PensoPay_Order_Utils::get_clean_order_number( $order ), $payment->get_current_type() ) );
+					throw new BrickellPay_API_Exception( sprintf( "Action: \"%s\", is not allowed for order #%d, with type state \"%s\"", $param_action, WC_PensoPay_Order_Utils::get_clean_order_number( $order ), $payment->get_current_type() ) );
 				}
 			} catch ( PensoPay_Exception $e ) {
 				$e->write_to_logs();

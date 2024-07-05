@@ -10,7 +10,7 @@
  * @docs        http://tech.quickpay.net/api/services/?scope=merchant
  */
 
-class WC_PensoPay_API_Subscription extends WC_PensoPay_API_Transaction {
+class WC_PensoPay_API_Subscription extends WC_BrickellPay_API_Transaction {
 	/**
 	 * __construct function.
 	 *
@@ -40,7 +40,7 @@ class WC_PensoPay_API_Subscription extends WC_PensoPay_API_Transaction {
 	 * @param null $amount
 	 *
 	 * @return array|object $request
-	 * @throws PensoPay_API_Exception
+	 * @throws BrickellPay_API_Exception
 	 */
 	public function recurring( $subscription_id, WC_Order $order, $amount = null ) {
 		// Check if a custom amount ha been set
@@ -78,7 +78,7 @@ class WC_PensoPay_API_Subscription extends WC_PensoPay_API_Transaction {
 	 * @param int $subscription_id
 	 *
 	 * @return void
-	 * @throws PensoPay_API_Exception
+	 * @throws BrickellPay_API_Exception
 	 */
 	public function cancel( int $subscription_id ): void {
 		$this->post( sprintf( '%d/%s', $subscription_id, 'cancel' ) );
@@ -95,7 +95,7 @@ class WC_PensoPay_API_Subscription extends WC_PensoPay_API_Transaction {
 	 * @param $action
 	 *
 	 * @return boolean
-	 * @throws PensoPay_API_Exception
+	 * @throws BrickellPay_API_Exception
 	 */
 	public function is_action_allowed( $action ): bool {
 		try {

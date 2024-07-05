@@ -77,7 +77,7 @@ class PensoPay_Exception extends Exception {
 }
 
 
-class PensoPay_API_Exception extends PensoPay_Exception {
+class BrickellPay_API_Exception extends PensoPay_Exception {
 	/**
 	 * write_to_logs function.
 	 *
@@ -111,5 +111,5 @@ class PensoPay_API_Exception extends PensoPay_Exception {
 	}
 }
 
-class PensoPay_Capture_Exception extends PensoPay_API_Exception {
+class BrickellPay_Capture_Exception extends BrickellPay_API_Exception {
 }

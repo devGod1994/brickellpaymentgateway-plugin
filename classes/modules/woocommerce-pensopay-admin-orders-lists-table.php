@@ -84,7 +84,7 @@ class WC_PensoPay_Admin_Orders_Lists_Table extends WC_PensoPay_Module {
 						'is_cached'                  => $transaction->is_loaded_from_cached(),
 					] );
 				}
-			} catch ( PensoPay_Exception|PensoPay_API_Exception $e ) {
+			} catch ( PensoPay_Exception|BrickellPay_API_Exception $e ) {
 				WC_PP()->log->add( sprintf( 'Order list: #%s - %s', $order->get_id(), $e->getMessage() ) );
 			}
 		}

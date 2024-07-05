@@ -9,7 +9,7 @@
  * @author 		PensoPay
  */
 
-class WC_PensoPay_API {
+class WC_BrickellPay_API {
 
 	/**
 	 * Contains cURL instance
@@ -85,7 +85,7 @@ class WC_PensoPay_API {
 	 * @param bool $return_array
 	 *
 	 * @return object
-	 * @throws PensoPay_API_Exception
+	 * @throws BrickellPay_API_Exception
 	 */
 	public function get( $path, bool $return_array = false ) {
 		// Instantiate a new instance
@@ -107,7 +107,7 @@ class WC_PensoPay_API {
 	 * @param bool $return_array
 	 *
 	 * @return object
-	 * @throws PensoPay_API_Exception
+	 * @throws BrickellPay_API_Exception
 	 */
 	public function post( $path, array $form = [], bool $return_array = false ) {
 		// Instantiate a new instance
@@ -129,7 +129,7 @@ class WC_PensoPay_API {
 	 * @param bool $return_array
 	 *
 	 * @return object
-	 * @throws PensoPay_API_Exception
+	 * @throws BrickellPay_API_Exception
 	 */
 	public function put( $path, array $form = [], bool $return_array = false ) {
 		// Instantiate a new instance
@@ -150,7 +150,7 @@ class WC_PensoPay_API {
 	 * @param bool $return_array
 	 *
 	 * @return object
-	 * @throws PensoPay_API_Exception
+	 * @throws BrickellPay_API_Exception
 	 */
 	public function patch( $path, array $form = [], bool $return_array = false ) {
 		// Instantiate a new instance
@@ -172,7 +172,7 @@ class WC_PensoPay_API {
 	 * @param bool $return_array - if we want to retrieve an array with additional
 	 *
 	 * @return object|array
-	 * @throws PensoPay_API_Exception
+	 * @throws BrickellPay_API_Exception
 	 */
 	public function execute( string $request_type, array $form = [], bool $return_array = false ) {
 		// Set the HTTP request type
@@ -231,11 +231,11 @@ class WC_PensoPay_API {
 					}
 				}
 
-				throw new PensoPay_API_Exception( implode( "\n", $error_messages ), $response_code, null, $curl_request_url, $request_form_data, $response_data );
+				throw new BrickellPay_API_Exception( implode( "\n", $error_messages ), $response_code, null, $curl_request_url, $request_form_data, $response_data );
 			} else if ( isset( $this->resource_data->message ) ) {
-				throw new PensoPay_API_Exception( $this->resource_data->message, $response_code, null, $curl_request_url, $request_form_data, $response_data );
+				throw new BrickellPay_API_Exception( $this->resource_data->message, $response_code, null, $curl_request_url, $request_form_data, $response_data );
 			} else {
-				throw new PensoPay_API_Exception( (string) json_encode( $this->resource_data ), $response_code, null, $curl_request_url, $request_form_data, $response_data );
+				throw new BrickellPay_API_Exception( (string) json_encode( $this->resource_data ), $response_code, null, $curl_request_url, $request_form_data, $response_data );
 			}
 
 		}

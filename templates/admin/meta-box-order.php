@@ -1,6 +1,6 @@
 <?php
 /**
- * @var WC_PensoPay_API_Transaction $transaction
+ * @var WC_BrickellPay_API_Transaction $transaction
  * @var int $transaction_id
  * @var null|string $transaction_status
  * @var null|string $payment_link

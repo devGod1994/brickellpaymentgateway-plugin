@@ -52,7 +52,7 @@ if (!empty($subscriptions)) {
                 
 
                 $logger->add(sprintf('Migrated transaction (%d) from parent order ID: %s to subscription order ID: %s', $transaction_id, $subscription_id, $order_id));
-            } catch( PensoPay_API_Exception $e ) {
+            } catch( BrickellPay_API_Exception $e ) {
                 $logger->add(sprintf('Failed migration of transaction (%d) from parent order ID: %s to subscription order ID: %s. Error: %s', $transaction_id, $subscription_id, $order_id, $e->getMessage()));
             }
         }

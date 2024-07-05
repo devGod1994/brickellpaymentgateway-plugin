@@ -61,9 +61,9 @@ class WC_PensoPay_Admin_Orders_Meta extends WC_PensoPay_Module {
 
 				try {
 					$status = $transaction->get_current_type();
-				} catch ( PensoPay_API_Exception $e ) {
+				} catch ( BrickellPay_API_Exception $e ) {
 					if ( $state !== 'initial' ) {
-						throw new PensoPay_API_Exception( $e->getMessage() );
+						throw new BrickellPay_API_Exception( $e->getMessage() );
 					}
 
 					$status = $state;
@@ -75,7 +75,7 @@ class WC_PensoPay_Admin_Orders_Meta extends WC_PensoPay_Module {
 					'transaction_status'   => $status,
 					'transaction_order_id' => WC_PensoPay_Order_Payments_Utils::get_transaction_order_id( $order ),
 				] );
-			} catch ( PensoPay_Exception|PensoPay_API_Exception $e ) {
+			} catch ( PensoPay_Exception|BrickellPay_API_Exception $e ) {
 				$e->write_to_logs();
 				if ( $state !== 'initial' ) {
 					$e->write_standard_warning();
@@ -125,9 +125,9 @@ class WC_PensoPay_Admin_Orders_Meta extends WC_PensoPay_Module {
 				$state = $transaction->get_state();
 				try {
 					$status = $transaction->get_current_type() . ' (' . __( 'subscription', 'woo-pensopay' ) . ')';
-				} catch ( PensoPay_API_Exception $e ) {
+				} catch ( BrickellPay_API_Exception $e ) {
 					if ( 'initial' !== $state ) {
-						throw new PensoPay_API_Exception( $e->getMessage() );
+						throw new BrickellPay_API_Exception( $e->getMessage() );
 					}
 					$status = $state;
 				}
@@ -139,7 +139,7 @@ class WC_PensoPay_Admin_Orders_Meta extends WC_PensoPay_Module {
 					'transaction_order_id' => WC_PensoPay_Order_Payments_Utils::get_transaction_order_id( $subscription ),
 				] );
 
-			} catch ( PensoPay_API_Exception $e ) {
+			} catch ( BrickellPay_API_Exception $e ) {
 				$e->write_to_logs();
 				if ( 'initial' !== $state ) {
 					$e->write_standard_warning();

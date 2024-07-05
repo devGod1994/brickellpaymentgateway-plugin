@@ -4,34 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="302bbbe3-80be-4d28-9b42-80cfa0f272d3" name="Changes" comment="">
+    <list default="true" id="302bbbe3-80be-4d28-9b42-80cfa0f272d3" name="Changes" comment="- step 3 update settings">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/instances/anyday.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/instances/anyday.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/instances/apple-pay.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/instances/apple-pay.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/instances/fbg1886.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/instances/fbg1886.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/instances/google-pay.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/instances/google-pay.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/instances/ideal.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/instances/ideal.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/instances/instance.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/instances/instance.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/instances/klarna-payments.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/instances/klarna-payments.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/instances/klarna.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/instances/klarna.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/instances/mobilepay-subscriptions.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/instances/mobilepay-subscriptions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/instances/mobilepay.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/instances/mobilepay.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/instances/paypal.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/instances/paypal.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/instances/pensopay-extra.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/instances/pensopay-extra.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/instances/resurs.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/instances/resurs.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/instances/sofort.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/instances/sofort.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/instances/swish.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/instances/swish.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/instances/trustly.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/instances/trustly.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/instances/viabill.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/instances/viabill.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/instances/vipps.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/instances/vipps.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/woocommerce-pensopay-settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/woocommerce-pensopay-settings.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/woo-pensopay-da_DK.mo" beforeDir="false" afterPath="$PROJECT_DIR$/languages/woo-pensopay-da_DK.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/woo-pensopay-da_DK.po" beforeDir="false" afterPath="$PROJECT_DIR$/languages/woo-pensopay-da_DK.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/woo-pensopay-de_DE.po" beforeDir="false" afterPath="$PROJECT_DIR$/languages/woo-pensopay-de_DE.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/woo-pensopay-es_ES.po" beforeDir="false" afterPath="$PROJECT_DIR$/languages/woo-pensopay-es_ES.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/woo-pensopay-sv_SE.po" beforeDir="false" afterPath="$PROJECT_DIR$/languages/woo-pensopay-sv_SE.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/woo-pensopay.pot" beforeDir="false" afterPath="$PROJECT_DIR$/languages/woo-pensopay.pot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/virtualterminal/grid.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/virtualterminal/grid.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/api/woocommerce-pensopay-api-payment.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/api/woocommerce-pensopay-api-payment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/api/woocommerce-pensopay-api-subscription.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/api/woocommerce-pensopay-api-subscription.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/api/woocommerce-pensopay-api-transaction.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/api/woocommerce-pensopay-api-transaction.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/api/woocommerce-pensopay-api.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/api/woocommerce-pensopay-api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/modules/ajax/woocommerce-pensopay-admin-ajax-manage-payment.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/modules/ajax/woocommerce-pensopay-admin-ajax-manage-payment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/modules/ajax/woocommerce-pensopay-admin-ajax-ping.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/modules/ajax/woocommerce-pensopay-admin-ajax-ping.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/modules/woocommerce-pensopay-admin-orders-lists-table.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/modules/woocommerce-pensopay-admin-orders-lists-table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/modules/woocommerce-pensopay-admin-orders-meta.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/modules/woocommerce-pensopay-admin-orders-meta.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/updates/woocommerce-pensopay-update-4.6.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/updates/woocommerce-pensopay-update-4.6.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/woocommerce-pensopay-exceptions.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/woocommerce-pensopay-exceptions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helpers/transactions.php" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/transactions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/virtualterminal/payment.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/virtualterminal/payment.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/woocommerce-brickellpay.php" beforeDir="false" afterPath="$PROJECT_DIR$/woocommerce-brickellpay.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -70,26 +56,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/xampp/htdocs/wordpress/wp-content/plugins/brickellpaymentgateway-plugin",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs/wordpress/wp-content/plugins/brickellpaymentgateway-plugin&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "GitStage.ChangesTree.GroupingKeys": [
-      "directory",
-      "module",
-      "repository"
+  &quot;keyToStringList&quot;: {
+    &quot;GitStage.ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;,
+      &quot;module&quot;,
+      &quot;repository&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -115,6 +101,7 @@
       <workItem from="1720156624111" duration="335000" />
       <workItem from="1720157293094" duration="7819000" />
       <workItem from="1720165277988" duration="16000" />
+      <workItem from="1720165296057" duration="2330000" />
     </task>
     <task id="LOCAL-00001" summary="- step 2 setting part">
       <option name="closed" value="true" />
@@ -124,7 +111,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720160626426</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="- step 3 update settings">
+      <option name="closed" value="true" />
+      <created>1720165422260</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1720165422260</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,6 +127,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="- step 2 setting part" />
-    <option name="LAST_COMMIT_MESSAGE" value="- step 2 setting part" />
+    <MESSAGE value="- step 3 update settings" />
+    <option name="LAST_COMMIT_MESSAGE" value="- step 3 update settings" />
   </component>
 </project>

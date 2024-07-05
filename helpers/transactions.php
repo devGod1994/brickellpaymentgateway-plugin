@@ -29,7 +29,7 @@ function woocommerce_pensopay_get_transaction_instance_by_order( $order ) {
  * @param mixed $order
  *
  * @return int
- * @throws PensoPay_API_Exception
+ * @throws BrickellPay_API_Exception
  */
 function woocommerce_pensopay_create_order_transaction( $order ) {
 	$order = woocommerce_pensopay_get_order( $order );
@@ -49,7 +49,7 @@ function woocommerce_pensopay_create_order_transaction( $order ) {
  * @param bool $force_update
  *
  * @return string
- * @throws PensoPay_API_Exception
+ * @throws BrickellPay_API_Exception
  */
 function woocommerce_pensopay_create_payment_link( $order, bool $force_update = true ): ?string {
 

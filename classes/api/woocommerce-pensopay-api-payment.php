@@ -10,7 +10,7 @@
  * @docs        http://tech.quickpay.net/api/services/?scope=merchant
  */
 
-class WC_PensoPay_API_Payment extends WC_PensoPay_API_Transaction {
+class WC_PensoPay_API_Payment extends WC_BrickellPay_API_Transaction {
 
 	/**
 	 * __construct function.
@@ -45,9 +45,9 @@ class WC_PensoPay_API_Payment extends WC_PensoPay_API_Transaction {
 	 * @param float $amount
 	 *
 	 * @return object
-	 * @throws PensoPay_API_Exception
+	 * @throws BrickellPay_API_Exception
 	 * @throws PensoPay_Exception
-     * @throws PensoPay_Capture_Exception
+     * @throws BrickellPay_Capture_Exception
 	 */
 	public function capture( $transaction_id, WC_Order $order, $amount = null ) {
 		// Check if a custom amount ha been set
@@ -69,8 +69,8 @@ class WC_PensoPay_API_Payment extends WC_PensoPay_API_Transaction {
      * @param array $request
      * @param WC_Order $order
      *
-     * @throws PensoPay_API_Exception
-     * @throws PensoPay_Capture_Exception
+     * @throws BrickellPay_API_Exception
+     * @throws BrickellPay_Capture_Exception
      * @throws PensoPay_Exception
      */
 	public function check_last_operation_of_type_with_location_fallback( string $action, $order, $request ) {
@@ -83,7 +83,7 @@ class WC_PensoPay_API_Payment extends WC_PensoPay_API_Transaction {
         }
 
         if ( $follow_location && ! $_action ) {
-            $api     = new WC_PensoPay_API( WC_PP()->s( 'pensopay_apikey' ) );
+            $api     = new WC_BrickellPay_API( WC_PP()->s( 'pensopay_apikey' ) );
             $_action = $api->get( $request[5]['location'][0] );
 
             if ( empty( $_action ) ) {
@@ -96,7 +96,7 @@ class WC_PensoPay_API_Payment extends WC_PensoPay_API_Transaction {
         }
 
         if ( $_action->qp_status_code > 20200 ) {
-            throw new PensoPay_Capture_Exception( sprintf( '%s payment on order #%s failed. Message: %s', ucfirst( $action ), $order->get_id(), $_action->qp_status_msg ) );
+            throw new BrickellPay_Capture_Exception( sprintf( '%s payment on order #%s failed. Message: %s', ucfirst( $action ), $order->get_id(), $_action->qp_status_msg ) );
         }
     }
 
@@ -111,7 +111,7 @@ class WC_PensoPay_API_Payment extends WC_PensoPay_API_Transaction {
      * @param int $transaction_id
      *
      * @return void
-     * @throws PensoPay_API_Exception
+     * @throws BrickellPay_API_Exception
      * @throws PensoPay_Exception
      */
 	public function cancel( $transaction_id ): void {
@@ -131,7 +131,7 @@ class WC_PensoPay_API_Payment extends WC_PensoPay_API_Transaction {
 	 * @param int $amount
 	 *
 	 * @return void
-	 * @throws PensoPay_API_Exception
+	 * @throws BrickellPay_API_Exception
 	 * @throws PensoPay_Exception
 	 */
 	public function refund( int $transaction_id, WC_Order $order, ?float $amount = null ): void {
@@ -163,7 +163,7 @@ class WC_PensoPay_API_Payment extends WC_PensoPay_API_Transaction {
 	 *
 	 * @access public
 	 * @return boolean
-	 * @throws PensoPay_API_Exception
+	 * @throws BrickellPay_API_Exception
 	 */
 	public function is_action_allowed( $action ): bool {
 		try {

@@ -433,17 +433,17 @@ function init_pensopay_gateway() {
 							// Call the action method and parse the transaction id and order object
                             $payment->$param_action( $transaction_id, $order, WC_PensoPay_Helper::price_multiplied_to_float( $amount, $payment->get_currency() ) );
 						} else {
-							throw new PensoPay_API_Exception( sprintf( "Unsupported action: %s.", $param_action ) );
+							throw new BrickellPay_API_Exception( sprintf( "Unsupported action: %s.", $param_action ) );
 						}
 					} // The action was not allowed. Throw an exception
 					else {
-						throw new PensoPay_API_Exception( sprintf( "Action: \"%s\", is not allowed for order #%d, with type state \"%s\"", $param_action, $order->get_clean_order_number(), $payment->get_current_type() ) );
+						throw new BrickellPay_API_Exception( sprintf( "Action: \"%s\", is not allowed for order #%d, with type state \"%s\"", $param_action, $order->get_clean_order_number(), $payment->get_current_type() ) );
 					}
 				} catch ( PensoPay_Exception $e ) {
 					echo $e->getMessage();
 					$e->write_to_logs();
 					exit;
-				} catch ( PensoPay_API_Exception $e ) {
+				} catch ( BrickellPay_API_Exception $e ) {
 					echo $e->getMessage();
 					$e->write_to_logs();
 					exit;
@@ -499,7 +499,7 @@ function init_pensopay_gateway() {
 
 				$api_key = $_POST['api_key'];
 
-				$api = new WC_PensoPay_API( $api_key );
+				$api = new WC_BrickellPay_API( $api_key );
 
 				$response = $api->get( 'account/private-key' );
 				echo json_encode( [ 'status' => 'success', 'data' => $response ] );
@@ -518,10 +518,10 @@ function init_pensopay_gateway() {
 			$status = 'error';
 			if ( ! empty( $_POST['api_key'] ) ) {
 				try {
-					$api = new WC_PensoPay_API( sanitize_text_field( $_POST['api_key'] ) );
+					$api = new WC_BrickellPay_API( sanitize_text_field( $_POST['api_key'] ) );
 					$api->get( '/payments?page_size=1' );
 					$status = 'success';
-				} catch ( PensoPay_API_Exception $e ) {
+				} catch ( BrickellPay_API_Exception $e ) {
 					var_dump( $e->getMessage() );
 				}
 			}
@@ -573,7 +573,7 @@ function init_pensopay_gateway() {
 
 								$payment->capture( $transaction_id, $order, $amount );
 							}
-						} catch ( PensoPay_Capture_Exception $e ) {
+						} catch ( BrickellPay_Capture_Exception $e ) {
 							woocommerce_pensopay_add_runtime_error_notice( $e->getMessage() );
 							$order->add_order_note( $e->getMessage() );
 							$this->log->add( $e->getMessage() );
@@ -689,13 +689,13 @@ function init_pensopay_gateway() {
 							// Capture the payment
 							$payment->capture( $transaction_id, $order );
 						} // Payment failed
-						catch ( PensoPay_API_Exception $e ) {
+						catch ( BrickellPay_API_Exception $e ) {
 							$this->log->add( sprintf( "Could not process pre-order payment for order: #%s with transaction id: %s. Payment failed. Exception: %s", $order->get_clean_order_number(), $transaction_id, $e->getMessage() ) );
 
 							$order->update_status( 'failed' );
 						}
 					}
-				} catch ( PensoPay_API_Exception $e ) {
+				} catch ( BrickellPay_API_Exception $e ) {
 					$this->log->add( sprintf( "Could not process pre-order payment for order: #%s with transaction id: %s. Transaction not found. Exception: %s", $order->get_clean_order_number(), $transaction_id, $e->getMessage() ) );
 				}
 			}
@@ -902,7 +902,7 @@ function init_pensopay_gateway() {
 		 *
 		 * @param WC_Subscription $subscription
 		 *
-		 * @throws PensoPay_API_Exception
+		 * @throws BrickellPay_API_Exception
 		 */
 		public function woocommerce_subscription_validate_payment_meta( $payment_meta, $subscription ) {
 			if ( isset( $payment_meta['post_meta']['_pensopay_transaction_id']['value'] ) ) {
@@ -1069,7 +1069,7 @@ function init_pensopay_gateway() {
 						do_action( 'woocommerce_pensopay_accepted_callback', $order, $json );
 						do_action( 'woocommerce_pensopay_accepted_callback_status_' . $transaction->type, $order, $json );
 
-					} catch ( PensoPay_API_Exception $e ) {
+					} catch ( BrickellPay_API_Exception $e ) {
 						$e->write_to_logs();
 					}
 				}
@@ -1213,9 +1213,9 @@ function init_pensopay_gateway() {
 
 					try {
 						$status = $transaction->get_current_type();
-					} catch ( PensoPay_API_Exception $e ) {
+					} catch ( BrickellPay_API_Exception $e ) {
 						if ( $state !== 'initial' ) {
-							throw new PensoPay_API_Exception( $e->getMessage() );
+							throw new BrickellPay_API_Exception( $e->getMessage() );
 						}
 
 						$status = $state;
@@ -1252,7 +1252,7 @@ function init_pensopay_gateway() {
 					if ( isset( $transaction_order_id ) && ! empty( $transaction_order_id ) ) {
 						printf( '<p><small><strong>%s:</strong> %s</small>', __( 'Transaction Order ID', 'woo-pensopay' ), $transaction_order_id );
 					}
-				} catch ( PensoPay_API_Exception $e ) {
+				} catch ( BrickellPay_API_Exception $e ) {
 					$e->write_to_logs();
 					if ( $state !== 'initial' ) {
 						$e->write_standard_warning();
@@ -1307,9 +1307,9 @@ function init_pensopay_gateway() {
 					$state  = $transaction->get_state();
 					try {
 						$status = $transaction->get_current_type() . ' (' . __( 'subscription', 'woo-pensopay' ) . ')';
-					} catch ( PensoPay_API_Exception $e ) {
+					} catch ( BrickellPay_API_Exception $e ) {
 						if ( 'initial' !== $state ) {
-							throw new PensoPay_API_Exception( $e->getMessage() );
+							throw new BrickellPay_API_Exception( $e->getMessage() );
 						}
 						$status = $state;
 					}
@@ -1322,7 +1322,7 @@ function init_pensopay_gateway() {
 					if ( isset( $transaction_order_id ) && ! empty( $transaction_order_id ) ) {
 						printf( '<p><small><strong>%s:</strong> %s</small>', __( 'Transaction Order ID', 'woo-pensopay' ), $transaction_order_id );
 					}
-				} catch ( PensoPay_API_Exception $e ) {
+				} catch ( BrickellPay_API_Exception $e ) {
 					$e->write_to_logs();
 					if ( 'initial' !== $state ) {
 						$e->write_standard_warning();
@@ -1422,7 +1422,7 @@ function init_pensopay_gateway() {
 							'is_cached'                  => $transaction->is_loaded_from_cached(),
 						] );
 					}
-				} catch ( PensoPay_API_Exception $e ) {
+				} catch ( BrickellPay_API_Exception $e ) {
 					$this->log->add( sprintf( 'Order list: #%s - %s', $order->get_id(), $e->getMessage() ) );
 				} catch ( PensoPay_Exception $e ) {
 					$this->log->add( sprintf( 'Order list: #%s - %s', $order->get_id(), $e->getMessage() ) );

@@ -113,26 +113,26 @@
     </small>
 </p>
 
-<p>
-    <small>
-        <label for="customer_street"><?= __('Street', 'woo-pensopay') ?></label>
-        <input id="customer_street" name="customer_street" type="text" style="width:100%" value="<?= $paymentInstance->get_post_data('customer_street') ?>" <?= $blockExtended ? 'disabled="disabled"' : '' ?> />
-    </small>
-</p>
-
-<p>
-    <small>
-        <label for="customer_zipcode"><?= __('Zip Code', 'woo-pensopay') ?></label>
-        <input id="customer_zipcode" name="customer_zipcode" type="text" style="width:100%" value="<?= $paymentInstance->get_post_data('customer_zipcode') ?>" <?= $blockExtended ? 'disabled="disabled"' : '' ?> />
-    </small>
-</p>
-
-<p>
-    <small>
-        <label for="customer_city"><?= __('City', 'woo-pensopay') ?></label>
-        <input id="customer_city" name="customer_city" type="text" style="width:100%" value="<?= $paymentInstance->get_post_data('customer_city') ?>" <?= $blockExtended ? 'disabled="disabled"' : '' ?> />
-    </small>
-</p>
+<!--<p>-->
+<!--    <small>-->
+<!--        <label for="customer_street">--><?php //= __('Street', 'woo-pensopay') ?><!--</label>-->
+<!--        <input id="customer_street" name="customer_street" type="text" style="width:100%" value="--><?php //= $paymentInstance->get_post_data('customer_street') ?><!--" --><?php //= $blockExtended ? 'disabled="disabled"' : '' ?><!-- />-->
+<!--    </small>-->
+<!--</p>-->
+<!---->
+<!--<p>-->
+<!--    <small>-->
+<!--        <label for="customer_zipcode">--><?php //= __('Zip Code', 'woo-pensopay') ?><!--</label>-->
+<!--        <input id="customer_zipcode" name="customer_zipcode" type="text" style="width:100%" value="--><?php //= $paymentInstance->get_post_data('customer_zipcode') ?><!--" --><?php //= $blockExtended ? 'disabled="disabled"' : '' ?><!-- />-->
+<!--    </small>-->
+<!--</p>-->
+<!---->
+<!--<p>-->
+<!--    <small>-->
+<!--        <label for="customer_city">--><?php //= __('City', 'woo-pensopay') ?><!--</label>-->
+<!--        <input id="customer_city" name="customer_city" type="text" style="width:100%" value="--><?php //= $paymentInstance->get_post_data('customer_city') ?><!--" --><?php //= $blockExtended ? 'disabled="disabled"' : '' ?><!-- />-->
+<!--    </small>-->
+<!--</p>-->
 
 <input type="hidden" id="method_type" name="method_type" value="" />
 <div class="buttons-box">
