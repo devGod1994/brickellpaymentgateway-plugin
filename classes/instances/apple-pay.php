@@ -51,7 +51,7 @@ class WC_PensoPay_Apple_Pay extends WC_PensoPay_Instance {
                 'default'     => __( 'Apple Pay', 'woo-pensopay' )
             ],
             'description' => [
-                'title'       => __( 'Customer Message', 'woo-pensopay' ),
+                'title'       => __( 'Customer Message', 'woo-brickellpay' ),
                 'type'        => 'textarea',
                 'description' => __( 'This controls the description which the user sees during checkout.', 'woo-pensopay' ),
                 'default'     => sprintf( __( 'Pay with %s', 'woo-pensopay' ), 'Apple Pay' )

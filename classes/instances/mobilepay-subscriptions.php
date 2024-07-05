@@ -89,7 +89,7 @@ class WC_PensoPay_MobilePay_Subscriptions extends WC_PensoPay_Instance {
 				'default'     => __( 'MobilePay Subscriptions', 'woo-pensopay' )
 			],
 			'description' => [
-				'title'       => __( 'Customer Message', 'woo-pensopay' ),
+				'title'       => __( 'Customer Message', 'woo-brickellpay' ),
 				'type'        => 'textarea',
 				'description' => __( 'This controls the description which the user sees during checkout.', 'woo-pensopay' ),
 				'default'     => __( 'Subscribe with your mobile phone', 'woo-pensopay' )

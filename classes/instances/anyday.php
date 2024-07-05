@@ -33,9 +33,9 @@ class WC_PensoPay_Anyday extends WC_PensoPay_Instance {
 	public function init_form_fields(): void {
         $this->form_fields = [
             'enabled' => [
-                'title' => __( 'Enable', 'woo-pensopay' ),
+                'title' => __( 'Enable', 'woo-brickellpay' ),
                 'type' => 'checkbox',
-                'label' => __( 'Enable Anyday payments', 'woo-pensopay' ),
+                'label' => __( 'Enable Anyday payments', 'woo-brickellpay' ),
                 'default' => 'no'
             ],
             '_Shop_setup' => [
@@ -43,16 +43,16 @@ class WC_PensoPay_Anyday extends WC_PensoPay_Instance {
                 'title' => __( 'Shop setup', 'woo-brickellpay' ),
             ],
             'title' => [
-                'title' => __( 'Title', 'woo-pensopay' ),
+                'title' => __( 'Title', 'woo-brickellpay' ),
                 'type' => 'text',
-                'description' => __( 'This controls the title which the user sees during checkout.', 'woo-pensopay' ),
-                'default' => __('Anyday', 'woo-pensopay')
+                'description' => __( 'This controls the title which the user sees during checkout.', 'woo-brickellpay' ),
+                'default' => __('Anyday', 'woo-brickellpay')
             ],
             'description' => [
-                'title' => __( 'Customer Message', 'woo-pensopay' ),
+                'title' => __( 'Customer Message', 'woo-brickellpay' ),
                 'type' => 'textarea',
-                'description' => __( 'This controls the description which the user sees during checkout.', 'woo-pensopay' ),
-                'default' => __('Pay with Anyday', 'woo-pensopay')
+                'description' => __( 'This controls the description which the user sees during checkout.', 'woo-brickellpay' ),
+                'default' => __('Pay with Anyday', 'woo-brickellpay')
             ],
         ];
     }

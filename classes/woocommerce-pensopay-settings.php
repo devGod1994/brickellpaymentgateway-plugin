@@ -189,7 +189,7 @@ class WC_PensoPay_Settings {
 					'title'       => __( 'Complete order on capture callbacks', 'woo-quickpay' ),
 					'type'        => 'checkbox',
 					'label'       => __( 'Enable', 'woo-quickpay' ),
-					'description' => __( 'When enabled, an order will be automatically completed when capture callbacks are sent to WooCommerce. Callbacks are sent by Pensopay when the payment is captured from either the shop or the Pensopay manager. Keep disabled to manually complete orders. ', 'woo-pensopay' ),
+					'description' => __( 'When enabled, an order will be automatically completed when capture callbacks are sent to WooCommerce. Callbacks are sent by Brickellpay when the payment is captured from either the shop or the Brickellpay manager. Keep disabled to manually complete orders. ', 'woo-pensopay' ),
 					'default'     => 'no',
 				],
                 'pensopay_preventcompleteoncapturefail'         => [
@@ -231,14 +231,14 @@ class WC_PensoPay_Settings {
 					'title'       => __( 'Title', 'woo-pensopay' ),
 					'type'        => 'text',
 					'description' => __( 'This controls the title which the user sees during checkout.', 'woo-pensopay' ),
-					'default'     => __( 'PensoPay', 'woo-pensopay' ),
+					'default'     => __( 'BrickellPay', 'woo-pensopay' ),
 					'desc_tip'    => true,
 				],
 				'description'                           => [
-					'title'       => __( 'Customer Message', 'woo-pensopay' ),
+					'title'       => __( 'Customer Message', 'woo-brickellpay' ),
 					'type'        => 'textarea',
 					'description' => __( 'This controls the description which the user sees during checkout.', 'woo-pensopay' ),
-					'default'     => __( 'Pay via PensoPay. Allows you to pay with your credit card via PensoPay.', 'woo-pensopay' ),
+					'default'     => __( 'Pay via BrickellPay. Allows you to pay with your credit card via BrickellPay.', 'woo-pensopay' ),
 					'desc_tip'    => true,
 				],
 				'checkout_button_text'                  => [
@@ -477,7 +477,7 @@ class WC_PensoPay_Settings {
 	 * @return string
 	 */
 	public static function get_wiki_link() {
-		return 'https://help.pensopay.com';
+		return 'https://help.brickellpay.com';
 	}
 
 	/**

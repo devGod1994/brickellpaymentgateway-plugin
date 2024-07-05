@@ -808,7 +808,7 @@ msgstr ""
 "af Clearhaus)."
 
 #: classes/woocommerce-pensopay-settings.php:246
-msgid "Pay via PensoPay. Allows you to pay with your credit card via PensoPay."
+msgid "Pay via BrickellPay. Allows you to pay with your credit card via BrickellPay."
 msgstr "Betal via PensoPay. Betal med kreditkort via PensoPay."
 
 #: classes/woocommerce-pensopay-settings.php:250

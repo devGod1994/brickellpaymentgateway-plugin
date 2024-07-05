@@ -49,7 +49,7 @@ class WC_PensoPay_Sofort extends WC_PensoPay_Instance {
 				'default'     => __( 'Sofort', 'woo-pensopay' )
 			],
 			'description' => [
-				'title'       => __( 'Customer Message', 'woo-pensopay' ),
+				'title'       => __( 'Customer Message', 'woo-brickellpay' ),
 				'type'        => 'textarea',
 				'description' => __( 'This controls the description which the user sees during checkout.', 'woo-pensopay' ),
 				'default'     => __( 'Pay with your mobile phone', 'woo-pensopay' )

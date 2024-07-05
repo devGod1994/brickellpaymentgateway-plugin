@@ -515,7 +515,7 @@ msgid "PensoPay"
 msgstr ""
 
 #: classes/woocommerce-pensopay-settings.php:195
-msgid "Pay via PensoPay. Allows you to pay with your credit card via PensoPay."
+msgid "Pay via BrickellPay. Allows you to pay with your credit card via BrickellPay."
 msgstr ""
 
 #: classes/woocommerce-pensopay-settings.php:199

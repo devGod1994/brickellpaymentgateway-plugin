@@ -48,7 +48,7 @@ class WC_PensoPay_FBG1886 extends WC_PensoPay_Instance {
 				'default'     => __( 'Forbrugsforeningen af 1886', 'woo-pensopay' )
 			],
 			'description' => [
-				'title'       => __( 'Customer Message', 'woo-pensopay' ),
+				'title'       => __( 'Customer Message', 'woo-brickellpay' ),
 				'type'        => 'textarea',
 				'description' => __( 'This controls the description which the user sees during checkout.', 'woo-pensopay' ),
 				'default'     => __( 'Pay with Forbrugsforeningen af 1886', 'woo-pensopay' )

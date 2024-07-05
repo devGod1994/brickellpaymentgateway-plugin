@@ -48,7 +48,7 @@ class WC_PensoPay_iDEAL extends WC_PensoPay_Instance {
                 'default' => __('iDEAL', 'woo-pensopay')
             ],
             'description' => [
-                'title' => __( 'Customer Message', 'woo-pensopay' ),
+                'title' => __( 'Customer Message', 'woo-brickellpay' ),
                 'type' => 'textarea',
                 'description' => __( 'This controls the description which the user sees during checkout.', 'woo-pensopay' ),
                 'default' => __('Pay with iDEAL', 'woo-pensopay')

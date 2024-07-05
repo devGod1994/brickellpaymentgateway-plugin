@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'WCPP_VERSION', '7.1.0' );
+define( 'WCPP_VERSION', '1.0.0' );
 define( 'WCPP_URL', plugins_url( __FILE__ ) );
 define( 'WCPP_PATH', plugin_dir_path( __FILE__ ) );
 
@@ -135,8 +135,8 @@ function init_pensopay_gateway() {
 		 * @return void
 		 */
 		public function __construct() {
-			$this->id           = 'pensopay';
-			$this->method_title = 'PensoPay';
+			$this->id           = 'brickellpay';
+			$this->method_title = 'BricellPay';
 			$this->icon         = '';
 			$this->has_fields   = true;
 
@@ -1131,7 +1131,7 @@ function init_pensopay_gateway() {
 		 * @return string|void
 		 */
 		public function generate_settings_html( $form_fields = array(), $echo = true ) {
-			$html  = "<h3>PensoPay - {$this->id}, v" . WCPP_VERSION . "</h3>";
+			$html  = "<h3>BrickellPay - {$this->id}, v" . WCPP_VERSION . "</h3>";
 			$html .= "<p>" . __( 'Allows you to receive payments via Brickellpay.', 'woo-pensopay' ) . "</p>";
 			$html .= WC_PensoPay_Settings::clear_logs_section();
 
